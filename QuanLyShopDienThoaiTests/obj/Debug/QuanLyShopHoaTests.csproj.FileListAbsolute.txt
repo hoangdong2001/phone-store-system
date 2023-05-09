@@ -1,0 +1,17 @@
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\bin\Debug\QuanLyShopHoaTests.dll
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\bin\Debug\QuanLyShopHoaTests.pdb
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\bin\Debug\QuanLyShopHoa.exe
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\bin\Debug\QuanLyShopHoa.pdb
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\bin\Debug\QuanLyShopHoa.exe.config
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\obj\Debug\QuanLyShopHoaTests.csprojAssemblyReference.cache
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\obj\Debug\QuanLyShopHoaTests.csproj.CoreCompileInputs.cache
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\obj\Debug\QuanLyShopHoaTests.csproj.CopyComplete
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\obj\Debug\QuanLyShopHoaTests.dll
+D:\Std\Congnghephanmem\doan\PhanMem\QuanLyShopHoa\QuanLyShopHoaTests\obj\Debug\QuanLyShopHoaTests.pdb

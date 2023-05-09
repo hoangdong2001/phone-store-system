@@ -1,0 +1,17 @@
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\obj\Debug\QuanLyShopDienThoaiTests.csproj.AssemblyReference.cache
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\obj\Debug\QuanLyShopDienThoaiTests.csproj.CoreCompileInputs.cache
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\obj\Debug\QuanLyShopHoaTests.dll
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\obj\Debug\QuanLyShopHoaTests.pdb
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\bin\Debug\QuanLyShopHoaTests.dll
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\bin\Debug\QuanLyShopHoaTests.pdb
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\bin\Debug\QuanLyShopDienThoai.exe
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\bin\Debug\QuanLyShopDienThoai.pdb
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\bin\Debug\QuanLyShopDienThoai.exe.config
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\meows\OneDrive\Máy tính\Report\QuanLyShopDienThoai\QuanLyShopDienThoaiTests\obj\Debug\QuanLyShopDienThoaiTests.csproj.CopyComplete
