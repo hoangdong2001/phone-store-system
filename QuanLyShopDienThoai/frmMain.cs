@@ -536,20 +536,5 @@ namespace PhoneStoreSystem
             }
             catch (Exception) { }        
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTimKiemNV_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

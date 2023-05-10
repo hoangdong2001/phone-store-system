@@ -148,7 +148,7 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "THẾ GIỚI ĐIỆN THOẠI";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+
             // 
             // btnChangeAcc
             // 
@@ -332,7 +332,6 @@
             this.dgvNV.Size = new System.Drawing.Size(862, 539);
             this.dgvNV.TabIndex = 0;
             this.dgvNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNV_CellClick);
-            this.dgvNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNV_CellContentClick);
             // 
             // panel3
             // 
@@ -374,7 +373,7 @@
             this.btnTimKiemNV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiemNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimKiemNV.UseVisualStyleBackColor = true;
-            this.btnTimKiemNV.Click += new System.EventHandler(this.btnTimKiemNV_Click);
+
             // 
             // btnXoaNV
             // 
