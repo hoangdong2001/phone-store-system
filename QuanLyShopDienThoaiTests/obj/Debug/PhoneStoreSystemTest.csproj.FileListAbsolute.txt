@@ -1,0 +1,2 @@
+C:\WORK\Report\QuanLyShopDienThoaiTests\obj\Debug\PhoneStoreSystemTest.csproj.AssemblyReference.cache
+C:\WORK\Report\QuanLyShopDienThoaiTests\obj\Debug\PhoneStoreSystemTest.csproj.CoreCompileInputs.cache

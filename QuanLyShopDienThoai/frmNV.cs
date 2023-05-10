@@ -1,4 +1,4 @@
-﻿using QuanLyShopDienThoai.DAO;
+﻿using PhoneStoreSystem.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyShopDienThoai
+namespace PhoneStoreSystem
 {
     public partial class frmNV : Form
     {
@@ -19,6 +19,7 @@ namespace QuanLyShopDienThoai
         }
 
         public static string isMainButton = "";
+  
 
         //Hiển thị trang dữ liệu tương ứng với sự kiện click ở giao diện chính (frmMain)
         private void frmNV_Load(object sender, EventArgs e)
@@ -30,69 +31,69 @@ namespace QuanLyShopDienThoai
             if (isMainButton == "suanv")
             {
                 btnAddNV.Visible = false;
-                txtMaNV.Text = frmMain.MaNV;
-                txtMaNV.Enabled = false;
+                txtEmployeeID.Text = frmMain.EmployeeID;
+                txtEmployeeID.Enabled = false;
                 DataTable dt = new DataTable();
-                dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM NhanVien WHERE MaNV = '" + txtMaNV.Text + "'");
+                dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM Employee WHERE EmployeeID = '" + txtEmployeeID.Text + "'");
                 foreach (DataRow dr in dt.Rows)
                 {
-                    txtHotenNV.Text = dr["Hoten"].ToString();
-                    txtGtNV.Text = dr["Gioi"].ToString();
-                    txtChucvuNV.Text = dr["ChucVu"].ToString();
-                    txtNamsinhNV.Text = dr["NamSinh"].ToString();
-                    txtSdtNV.Text = dr["SDT"].ToString();
-                    txtDiachiNV.Text = dr["DiaChi"].ToString();
+                    txtFullNameNV.Text = dr["FullName"].ToString();
+                    txtGtNV.Text = dr["Gender"].ToString();
+                    txtPositionNV.Text = dr["Position"].ToString();
+                    txtBirthdayNV.Text = dr["Birthday"].ToString();
+                    txtPhoneNumberNV.Text = dr["PhoneNumber"].ToString();
+                    txtAddressNV.Text = dr["Address"].ToString();
                 }
             }
             if (isMainButton == "xemnv")
             {
                 btnAddNV.Visible = false;
                 btnUpdateNV.Visible = false;
-                txtMaNV.Text = frmMain.MaNV;
+                txtEmployeeID.Text = frmMain.EmployeeID;
                 DataTable dt = new DataTable();
-                dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM NhanVien WHERE MaNV = '" + frmMain.MaNV + "'");
+                dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM Employee WHERE EmployeeID = '" + frmMain.EmployeeID + "'");
                 foreach (DataRow dr in dt.Rows)
                 {
-                    txtHotenNV.Text = dr["Hoten"].ToString();
-                    txtGtNV.Text = dr["Gioi"].ToString();
-                    txtChucvuNV.Text = dr["ChucVu"].ToString();
-                    txtNamsinhNV.Text = dr["NamSinh"].ToString();
-                    txtSdtNV.Text = dr["SDT"].ToString();
-                    txtDiachiNV.Text = dr["DiaChi"].ToString();
+                    txtFullNameNV.Text = dr["FullName"].ToString();
+                    txtGtNV.Text = dr["Gender"].ToString();
+                    txtPositionNV.Text = dr["Position"].ToString();
+                    txtBirthdayNV.Text = dr["Birthday"].ToString();
+                    txtPhoneNumberNV.Text = dr["PhoneNumber"].ToString();
+                    txtAddressNV.Text = dr["Address"].ToString();
                 }
-                txtMaNV.Enabled = false;
-                txtHotenNV.Enabled = false;
+                txtEmployeeID.Enabled = false;
+                txtFullNameNV.Enabled = false;
                 txtGtNV.Enabled = false;
-                txtChucvuNV.Enabled = false;
-                txtNamsinhNV.Enabled = false;
-                txtSdtNV.Enabled = false;
-                txtDiachiNV.Enabled = false;
+                txtPositionNV.Enabled = false;
+                txtBirthdayNV.Enabled = false;
+                txtPhoneNumberNV.Enabled = false;
+                txtAddressNV.Enabled = false;
             }
         }
 
         //Thêm dữ liệu nhân viên
         private void btnAddNV_Click(object sender, EventArgs e)
         {
-            string id = txtMaNV.Text;
-            string hoten = txtHotenNV.Text;
-            string gioi = txtGtNV.Text;
-            string chucvu = txtChucvuNV.Text;
-            string namsinh = txtNamsinhNV.Text;
-            string sdt = txtSdtNV.Text;
-            string diachi = txtDiachiNV.Text;
+            string id = txtEmployeeID.Text;
+            string FullName = txtFullNameNV.Text;
+            string Gender = txtGtNV.Text;
+            string Position = txtPositionNV.Text;
+            string Birthday = txtBirthdayNV.Text;
+            string PhoneNumber = txtPhoneNumberNV.Text;
+            string Address = txtAddressNV.Text;
             if (id == "")
             {
                 MessageBox.Show("Vui lập nhập mã nhân viên!");
-                txtMaNV.Focus();
+                txtEmployeeID.Focus();
             }
             else
             {
                 try
                 {
-                    if (NhanVienDAO.Instance.InsertNV(id, hoten, gioi, chucvu, namsinh, sdt, diachi))
+                    if (EmployeeDAO.Instance.InsertNV(id, FullName, Gender, Position, Birthday, PhoneNumber, Address))
                     {
+
                         MessageBox.Show("Thêm nhân viên thành công");
-                    
                         this.Hide();
                     }
                 }
@@ -102,8 +103,8 @@ namespace QuanLyShopDienThoai
                 }
                 finally
                 {
-                    txtMaNV.Text = "";
-                    txtMaNV.Focus();
+                    txtEmployeeID.Text = "";
+                    txtEmployeeID.Focus();
                 }
             } 
         }
@@ -111,15 +112,15 @@ namespace QuanLyShopDienThoai
         //Cập nhật dữ liệu nhân viên
         private void btnUpdateNV_Click(object sender, EventArgs e)
         {
-            string id = txtMaNV.Text;
-            string hoten = txtHotenNV.Text;
-            string gioi = txtGtNV.Text;
-            string chucvu = txtChucvuNV.Text;
-            string namsinh = txtNamsinhNV.Text;
-            string sdt = txtSdtNV.Text;
-            string diachi = txtDiachiNV.Text;
+            string id = txtEmployeeID.Text;
+            string FullName = txtFullNameNV.Text;
+            string Gender = txtGtNV.Text;
+            string Position = txtPositionNV.Text;
+            string Birthday = txtBirthdayNV.Text;
+            string PhoneNumber = txtPhoneNumberNV.Text;
+            string Address = txtAddressNV.Text;
 
-            if (NhanVienDAO.Instance.UpdateNV(id,hoten, gioi, chucvu, namsinh, sdt, diachi))
+            if (EmployeeDAO.Instance.UpdateNV(id,FullName, Gender, Position, Birthday, PhoneNumber, Address))
             {
                 MessageBox.Show("Hoàn tất cập nhật");
                 this.Hide();

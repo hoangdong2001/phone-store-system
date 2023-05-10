@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyShopDienThoai.DAO
+namespace PhoneStoreSystem.DAO
 {
     public class DataProvider
     {
@@ -23,7 +23,7 @@ namespace QuanLyShopDienThoai.DAO
         public DataTable ExcuteQuery(string query)
         {
             DataTable data = new DataTable();
-            using (SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=QLShopDienThoai;Integrated Security=True"))
+            using (SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=PhoneStoreSystem;Integrated Security=True"))
             {
                 con.Open();
                 SqlCommand command = new SqlCommand(query, con);
@@ -37,7 +37,7 @@ namespace QuanLyShopDienThoai.DAO
         public int ExcuteNonQuery(string query)
         {
             int data=0;
-            using (SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=QLShopDienThoai;Integrated Security=True"))
+            using (SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=PhoneStoreSystem;Integrated Security=True"))
             {
                 con.Open();
                 SqlCommand command = new SqlCommand(query, con);
@@ -51,7 +51,7 @@ namespace QuanLyShopDienThoai.DAO
         public string ExcuteScalar(string query)
         {
             string data;
-            using (SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=QLShopDienThoai;Integrated Security=True"))
+            using (SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=PhoneStoreSystem;Integrated Security=True"))
             {
                 con.Open();
                 SqlCommand command = new SqlCommand(query, con);

@@ -1,4 +1,4 @@
-﻿namespace QuanLyShopDienThoai
+﻿namespace PhoneStoreSystem
 {
     partial class frmHD
     {
@@ -31,43 +31,43 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtNgayHD = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtSoHD = new System.Windows.Forms.TextBox();
+            this.txtOrderNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnEditHD = new System.Windows.Forms.Panel();
             this.btnXoaHH = new System.Windows.Forms.Button();
             this.btnThemHH = new System.Windows.Forms.Button();
             this.btnUpdateHD = new System.Windows.Forms.Button();
-            this.tvThanhTien = new System.Windows.Forms.Label();
+            this.tvTotalPrice = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtSL = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.tvDonGia = new System.Windows.Forms.Label();
+            this.tvPrice = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.tvTenHH = new System.Windows.Forms.Label();
+            this.tvProductName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtMaHH = new System.Windows.Forms.TextBox();
+            this.txtProductID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tvTongTien = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dgvDonHang = new System.Windows.Forms.DataGridView();
-            this.clMaHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clTenHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvOrder = new System.Windows.Forms.DataGridView();
+            this.clProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.pnEditHD.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.txtNgayHD);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtSoHD);
+            this.panel1.Controls.Add(this.txtOrderNumber);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(25, 25);
@@ -91,12 +91,12 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Ngày lập:";
             // 
-            // txtSoHD
+            // txtOrderNumber
             // 
-            this.txtSoHD.Location = new System.Drawing.Point(152, 16);
-            this.txtSoHD.Name = "txtSoHD";
-            this.txtSoHD.Size = new System.Drawing.Size(143, 22);
-            this.txtSoHD.TabIndex = 5;
+            this.txtOrderNumber.Location = new System.Drawing.Point(152, 16);
+            this.txtOrderNumber.Name = "txtOrderNumber";
+            this.txtOrderNumber.Size = new System.Drawing.Size(143, 22);
+            this.txtOrderNumber.TabIndex = 5;
             // 
             // label1
             // 
@@ -112,15 +112,15 @@
             this.pnEditHD.Controls.Add(this.btnXoaHH);
             this.pnEditHD.Controls.Add(this.btnThemHH);
             this.pnEditHD.Controls.Add(this.btnUpdateHD);
-            this.pnEditHD.Controls.Add(this.tvThanhTien);
+            this.pnEditHD.Controls.Add(this.tvTotalPrice);
             this.pnEditHD.Controls.Add(this.label10);
-            this.pnEditHD.Controls.Add(this.txtSL);
+            this.pnEditHD.Controls.Add(this.txtQuantity);
             this.pnEditHD.Controls.Add(this.label8);
-            this.pnEditHD.Controls.Add(this.tvDonGia);
+            this.pnEditHD.Controls.Add(this.tvPrice);
             this.pnEditHD.Controls.Add(this.label7);
-            this.pnEditHD.Controls.Add(this.tvTenHH);
+            this.pnEditHD.Controls.Add(this.tvProductName);
             this.pnEditHD.Controls.Add(this.label4);
-            this.pnEditHD.Controls.Add(this.txtMaHH);
+            this.pnEditHD.Controls.Add(this.txtProductID);
             this.pnEditHD.Controls.Add(this.label3);
             this.pnEditHD.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnEditHD.Location = new System.Drawing.Point(25, 113);
@@ -167,13 +167,13 @@
             this.btnUpdateHD.UseVisualStyleBackColor = true;
             this.btnUpdateHD.Click += new System.EventHandler(this.btnUpdateHD_Click);
             // 
-            // tvThanhTien
+            // tvTotalPrice
             // 
-            this.tvThanhTien.AutoSize = true;
-            this.tvThanhTien.Location = new System.Drawing.Point(152, 142);
-            this.tvThanhTien.Name = "tvThanhTien";
-            this.tvThanhTien.Size = new System.Drawing.Size(0, 17);
-            this.tvThanhTien.TabIndex = 25;
+            this.tvTotalPrice.AutoSize = true;
+            this.tvTotalPrice.Location = new System.Drawing.Point(152, 142);
+            this.tvTotalPrice.Name = "tvTotalPrice";
+            this.tvTotalPrice.Size = new System.Drawing.Size(0, 17);
+            this.tvTotalPrice.TabIndex = 25;
             // 
             // label10
             // 
@@ -184,13 +184,13 @@
             this.label10.TabIndex = 24;
             this.label10.Text = "Thành tiền:";
             // 
-            // txtSL
+            // txtQuantity
             // 
-            this.txtSL.Location = new System.Drawing.Point(152, 108);
-            this.txtSL.Name = "txtSL";
-            this.txtSL.Size = new System.Drawing.Size(143, 22);
-            this.txtSL.TabIndex = 23;
-            this.txtSL.TextChanged += new System.EventHandler(this.txtSL_TextChanged);
+            this.txtQuantity.Location = new System.Drawing.Point(152, 108);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(143, 22);
+            this.txtQuantity.TabIndex = 23;
+            this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
             // 
             // label8
             // 
@@ -201,13 +201,13 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Số lượng:";
             // 
-            // tvDonGia
+            // tvPrice
             // 
-            this.tvDonGia.AutoSize = true;
-            this.tvDonGia.Location = new System.Drawing.Point(152, 78);
-            this.tvDonGia.Name = "tvDonGia";
-            this.tvDonGia.Size = new System.Drawing.Size(0, 17);
-            this.tvDonGia.TabIndex = 21;
+            this.tvPrice.AutoSize = true;
+            this.tvPrice.Location = new System.Drawing.Point(152, 78);
+            this.tvPrice.Name = "tvPrice";
+            this.tvPrice.Size = new System.Drawing.Size(0, 17);
+            this.tvPrice.TabIndex = 21;
             // 
             // label7
             // 
@@ -218,13 +218,13 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "Đơn giá:";
             // 
-            // tvTenHH
+            // tvProductName
             // 
-            this.tvTenHH.AutoSize = true;
-            this.tvTenHH.Location = new System.Drawing.Point(152, 51);
-            this.tvTenHH.Name = "tvTenHH";
-            this.tvTenHH.Size = new System.Drawing.Size(0, 17);
-            this.tvTenHH.TabIndex = 19;
+            this.tvProductName.AutoSize = true;
+            this.tvProductName.Location = new System.Drawing.Point(152, 51);
+            this.tvProductName.Name = "tvProductName";
+            this.tvProductName.Size = new System.Drawing.Size(0, 17);
+            this.tvProductName.TabIndex = 19;
             // 
             // label4
             // 
@@ -235,13 +235,13 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Tên hàng hóa:";
             // 
-            // txtMaHH
+            // txtProductID
             // 
-            this.txtMaHH.Location = new System.Drawing.Point(152, 17);
-            this.txtMaHH.Name = "txtMaHH";
-            this.txtMaHH.Size = new System.Drawing.Size(143, 22);
-            this.txtMaHH.TabIndex = 17;
-            this.txtMaHH.Leave += new System.EventHandler(this.txtMaHH_Leave);
+            this.txtProductID.Location = new System.Drawing.Point(152, 17);
+            this.txtProductID.Name = "txtProductID";
+            this.txtProductID.Size = new System.Drawing.Size(143, 22);
+            this.txtProductID.TabIndex = 17;
+            this.txtProductID.Leave += new System.EventHandler(this.txtProductID_Leave);
             // 
             // label3
             // 
@@ -295,81 +295,81 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Tổng tiền:";
             // 
-            // dgvDonHang
+            // dgvOrder
             // 
-            this.dgvDonHang.AllowUserToAddRows = false;
-            this.dgvDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDonHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clMaHH,
-            this.clTenHH,
-            this.clDonGia,
-            this.clSL,
-            this.clThanhTien});
-            this.dgvDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDonHang.Location = new System.Drawing.Point(25, 328);
-            this.dgvDonHang.Name = "dgvDonHang";
-            this.dgvDonHang.ReadOnly = true;
-            this.dgvDonHang.RowHeadersWidth = 51;
-            this.dgvDonHang.RowTemplate.Height = 24;
-            this.dgvDonHang.Size = new System.Drawing.Size(600, 185);
-            this.dgvDonHang.TabIndex = 19;
-            this.dgvDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonHang_CellClick);
+            this.dgvOrder.AllowUserToAddRows = false;
+            this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clProductID,
+            this.clProductName,
+            this.clPrice,
+            this.clQuantity,
+            this.clTotalPrice});
+            this.dgvOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvOrder.Location = new System.Drawing.Point(25, 328);
+            this.dgvOrder.Name = "dgvOrder";
+            this.dgvOrder.ReadOnly = true;
+            this.dgvOrder.RowHeadersWidth = 51;
+            this.dgvOrder.RowTemplate.Height = 24;
+            this.dgvOrder.Size = new System.Drawing.Size(600, 185);
+            this.dgvOrder.TabIndex = 19;
+            this.dgvOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellClick);
             // 
-            // clMaHH
+            // clProductID
             // 
-            this.clMaHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.clMaHH.DataPropertyName = "MaHH";
-            this.clMaHH.HeaderText = "Mã";
-            this.clMaHH.MinimumWidth = 6;
-            this.clMaHH.Name = "clMaHH";
-            this.clMaHH.ReadOnly = true;
-            this.clMaHH.Width = 56;
+            this.clProductID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.clProductID.DataPropertyName = "ProductID";
+            this.clProductID.HeaderText = "Mã";
+            this.clProductID.MinimumWidth = 6;
+            this.clProductID.Name = "clProductID";
+            this.clProductID.ReadOnly = true;
+            this.clProductID.Width = 56;
             // 
-            // clTenHH
+            // clProductName
             // 
-            this.clTenHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.clTenHH.DataPropertyName = "TenHH";
-            this.clTenHH.HeaderText = "Tên hàng hóa";
-            this.clTenHH.MinimumWidth = 6;
-            this.clTenHH.Name = "clTenHH";
-            this.clTenHH.ReadOnly = true;
-            this.clTenHH.Width = 126;
+            this.clProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.clProductName.DataPropertyName = "ProductName";
+            this.clProductName.HeaderText = "Tên hàng hóa";
+            this.clProductName.MinimumWidth = 6;
+            this.clProductName.Name = "clProductName";
+            this.clProductName.ReadOnly = true;
+            this.clProductName.Width = 126;
             // 
-            // clDonGia
+            // clPrice
             // 
-            this.clDonGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.clDonGia.DataPropertyName = "DonGia";
-            this.clDonGia.HeaderText = "Giá";
-            this.clDonGia.MinimumWidth = 6;
-            this.clDonGia.Name = "clDonGia";
-            this.clDonGia.ReadOnly = true;
-            this.clDonGia.Width = 59;
+            this.clPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.clPrice.DataPropertyName = "Price";
+            this.clPrice.HeaderText = "Giá";
+            this.clPrice.MinimumWidth = 6;
+            this.clPrice.Name = "clPrice";
+            this.clPrice.ReadOnly = true;
+            this.clPrice.Width = 59;
             // 
-            // clSL
+            // clQuantity
             // 
-            this.clSL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.clSL.DataPropertyName = "SL";
-            this.clSL.HeaderText = "Số lượng";
-            this.clSL.MinimumWidth = 6;
-            this.clSL.Name = "clSL";
-            this.clSL.ReadOnly = true;
-            this.clSL.Width = 93;
+            this.clQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.clQuantity.DataPropertyName = "Quantity";
+            this.clQuantity.HeaderText = "Số lượng";
+            this.clQuantity.MinimumWidth = 6;
+            this.clQuantity.Name = "clQuantity";
+            this.clQuantity.ReadOnly = true;
+            this.clQuantity.Width = 93;
             // 
-            // clThanhTien
+            // clTotalPrice
             // 
-            this.clThanhTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clThanhTien.DataPropertyName = "ThanhTien";
-            this.clThanhTien.HeaderText = "Thành tiền";
-            this.clThanhTien.MinimumWidth = 6;
-            this.clThanhTien.Name = "clThanhTien";
-            this.clThanhTien.ReadOnly = true;
+            this.clTotalPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clTotalPrice.DataPropertyName = "TotalPrice";
+            this.clTotalPrice.HeaderText = "Thành tiền";
+            this.clTotalPrice.MinimumWidth = 6;
+            this.clTotalPrice.Name = "clTotalPrice";
+            this.clTotalPrice.ReadOnly = true;
             // 
             // frmHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 581);
-            this.Controls.Add(this.dgvDonHang);
+            this.Controls.Add(this.dgvOrder);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnEditHD);
             this.Controls.Add(this.panel1);
@@ -383,7 +383,7 @@
             this.pnEditHD.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -393,31 +393,31 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtNgayHD;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSoHD;
+        private System.Windows.Forms.TextBox txtOrderNumber;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnEditHD;
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Button btnThemHH;
         private System.Windows.Forms.Button btnUpdateHD;
-        private System.Windows.Forms.Label tvThanhTien;
+        private System.Windows.Forms.Label tvTotalPrice;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtSL;
+        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label tvDonGia;
+        private System.Windows.Forms.Label tvPrice;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label tvTenHH;
+        private System.Windows.Forms.Label tvProductName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMaHH;
+        private System.Windows.Forms.TextBox txtProductID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label tvTongTien;
-        private System.Windows.Forms.DataGridView dgvDonHang;
+        private System.Windows.Forms.DataGridView dgvOrder;
         private System.Windows.Forms.Button btnXoaHH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clMaHH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clTenHH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clDonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clSL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clThanhTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clProductID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clTotalPrice;
     }
 }

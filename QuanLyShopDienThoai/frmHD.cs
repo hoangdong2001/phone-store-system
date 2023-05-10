@@ -1,4 +1,4 @@
-﻿using QuanLyShopDienThoai.DAO;
+﻿using PhoneStoreSystem.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyShopDienThoai
+namespace PhoneStoreSystem
 {
     public partial class frmHD : Form
     {
@@ -27,12 +27,12 @@ namespace QuanLyShopDienThoai
                 try
                 {
                     btnUpdateHD.Visible = false;
-                    HoaDonDAO.Instance.InsertHD(DateTime.Now);
+                    BillDAO.Instance.InsertHD(DateTime.Now);
                     txtNgayHD.Text = DateTime.Now.ToString("dd/MM/yyyy");
-                    txtSoHD.Text = DataProvider.Instance.ExcuteScalar("SELECT Max(SoHD) FROM HoaDon");
-                    txtSoHD.Enabled = false;
+                    txtOrderNumber.Text = DataProvider.Instance.ExcuteScalar("SELECT Max(OrderNumber) FROM Bill");
+                    txtOrderNumber.Enabled = false;
                     txtNgayHD.Enabled = false;
-                    txtMaHH.Focus();
+                    txtProductID.Focus();
                 }
                 catch (Exception) { }
             }
@@ -41,15 +41,15 @@ namespace QuanLyShopDienThoai
                 try
                 {
                     btnThanhToan.Visible = false;
-                    txtSoHD.Text = frmMain.SoHD;
-                    dgvDonHang.DataSource = DataProvider.Instance.ExcuteQuery("SELECT MaHH, TenHH, DonGia, SL, ThanhTien FROM DonHang WHERE SoHD = " + frmMain.SoHD);
-                    DataTable dt = DataProvider.Instance.ExcuteQuery("SELECT NgayLap, TongTien FROM HoaDon WHERE SoHD = " + int.Parse(frmMain.SoHD));
+                    txtOrderNumber.Text = frmMain.OrderNumber;
+                    dgvOrder.DataSource = DataProvider.Instance.ExcuteQuery("SELECT ProductID, ProductName, Price, Quantity, TotalPrice FROM Order WHERE OrderNumber = " + frmMain.OrderNumber);
+                    DataTable dt = DataProvider.Instance.ExcuteQuery("SELECT CreateDate, TongTien FROM Bill WHERE OrderNumber = " + int.Parse(frmMain.OrderNumber));
                     foreach (DataRow dr in dt.Rows)
                     {
-                        txtNgayHD.Text = dr["NgayLap"].ToString();
+                        txtNgayHD.Text = dr["CreateDate"].ToString();
                         tvTongTien.Text = dr["TongTien"].ToString();
                     }
-                    txtSoHD.Enabled = false;
+                    txtOrderNumber.Enabled = false;
                     txtNgayHD.Enabled = false;
                 }
                 catch (Exception) { }
@@ -59,19 +59,19 @@ namespace QuanLyShopDienThoai
                 pnEditHD.Visible = false;
                 try
                 {
-                    DataTable dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM HoaDon WHERE SoHD = " + frmMain.SoHD);
+                    DataTable dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM Bill WHERE OrderNumber = " + frmMain.OrderNumber);
                     if (dt != null)
                     {
                         foreach (DataRow dr in dt.Rows)
                         {
-                            txtSoHD.Text = dr["SoHD"].ToString();
-                            txtNgayHD.Text = dr["NgayLap"].ToString();
+                            txtOrderNumber.Text = dr["OrderNumber"].ToString();
+                            txtNgayHD.Text = dr["CreateDate"].ToString();
                             tvTongTien.Text = dr["TongTien"].ToString() + " vnđ";
                         }
                     }
-                    txtSoHD.Enabled = false;
+                    txtOrderNumber.Enabled = false;
                     txtNgayHD.Enabled = false;
-                    dgvDonHang.DataSource = DataProvider.Instance.ExcuteQuery("SELECT MaHH, TenHH, DonGia, SL, ThanhTien FROM DonHang WHERE SoHD = " + int.Parse(frmMain.SoHD));
+                    dgvOrder.DataSource = DataProvider.Instance.ExcuteQuery("SELECT ProductID, ProductName, Price, Quantity, TotalPrice FROM Order WHERE OrderNumber = " + int.Parse(frmMain.OrderNumber));
                 }
                 catch (Exception) { }
             }
@@ -80,7 +80,7 @@ namespace QuanLyShopDienThoai
         //Thêm hàng hóa cho hóa đơn
         private void btnThemHH_Click(object sender, EventArgs e)
         {
-            if (txtMaHH.Text == "" || txtSL.Text == "")
+            if (txtProductID.Text == "" || txtQuantity.Text == "")
             {
                 MessageBox.Show("Nhập thông tin cho sản phẩm!");
             }
@@ -88,18 +88,18 @@ namespace QuanLyShopDienThoai
             {
                 try
                 {
-                    int sohd = int.Parse(txtSoHD.Text);
-                    string mahh = txtMaHH.Text;
-                    string tenhh = tvTenHH.Text;
-                    float gia = float.Parse(tvDonGia.Text);
-                    int sl = int.Parse(txtSL.Text);
-                    float thanhtien = gia * sl;
+                    int OrderNumber = int.Parse(txtOrderNumber.Text);
+                    string ProductID = txtProductID.Text;
+                    string ProductName = tvProductName.Text;
+                    float gia = float.Parse(tvPrice.Text);
+                    int Quantity = int.Parse(txtQuantity.Text);
+                    float TotalPrice = gia * Quantity;
 
-                    if (DonHangDAO.Instance.InsertDH(sohd, mahh, tenhh, gia, sl, thanhtien))
+                    if (OrderDAO.Instance.InsertDH(OrderNumber, ProductID, ProductName, gia, Quantity, TotalPrice))
                     {
-                        string query = "UPDATE HangHoa SET SL -=" + sl + " WHERE MaHH = '" + mahh + "'";
+                        string query = "UPDATE Product SET Quantity -=" + Quantity + " WHERE ProductID = '" + ProductID + "'";
                         DataProvider.Instance.ExcuteNonQuery(query);
-                        dgvDonHang.DataSource = DataProvider.Instance.ExcuteQuery("SELECT MaHH, TenHH, DonGia, SL, ThanhTien FROM DonHang WHERE SoHD = " + int.Parse(txtSoHD.Text));
+                        dgvOrder.DataSource = DataProvider.Instance.ExcuteQuery("SELECT ProductID, ProductName, Price, Quantity, TotalPrice FROM Order WHERE OrderNumber = " + int.Parse(txtOrderNumber.Text));
                     }
                 }
                 catch (Exception) { }             
@@ -109,7 +109,7 @@ namespace QuanLyShopDienThoai
         //Xóa hàng hóa khỏi hóa đơn
         private void btnXoaHH_Click(object sender, EventArgs e)
         {
-            if (MaHH == "")
+            if (ProductID == "")
             {
                 MessageBox.Show("Hàng hóa không tồn tại!");
             }
@@ -117,38 +117,38 @@ namespace QuanLyShopDienThoai
             {
                 try
                 {
-                    string id = MaHH;
-                    DonHangDAO.Instance.DeleteDH(id);
-                    dgvDonHang.DataSource = DataProvider.Instance.ExcuteQuery("SELECT MaHH,TenHH,DonGia,SL,ThanhTien FROM DonHang WHERE SoHD = " + int.Parse(txtSoHD.Text));
+                    string id = ProductID;
+                    OrderDAO.Instance.DeleteDH(id);
+                    dgvOrder.DataSource = DataProvider.Instance.ExcuteQuery("SELECT ProductID,ProductName,Price,Quantity,TotalPrice FROM Order WHERE OrderNumber = " + int.Parse(txtOrderNumber.Text));
                 }
                 catch (Exception) { }            
             }
         }
 
-        private void txtMaHH_Leave(object sender, EventArgs e)
+        private void txtProductID_Leave(object sender, EventArgs e)
         {
-            string mahh = txtMaHH.Text;
-            DataTable dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM HangHoa WHERE MaHH = '" + mahh + "'");
+            string ProductID = txtProductID.Text;
+            DataTable dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM Product WHERE ProductID = '" + ProductID + "'");
             if (dt != null)
             {
                 foreach (DataRow dr in dt.Rows)
                 {
-                    tvTenHH.Text = dr["TenHH"].ToString();
-                    tvDonGia.Text = dr["GiaBan"].ToString();
+                    tvProductName.Text = dr["ProductName"].ToString();
+                    tvPrice.Text = dr["ProductPrice"].ToString();
                 }
             }
         }
 
-        private void txtSL_TextChanged(object sender, EventArgs e)
+        private void txtQuantity_TextChanged(object sender, EventArgs e)
         {
-            float gia = float.Parse(tvDonGia.Text);
-            int sl = 0;
-            if (txtSL.Text != "")
+            float gia = float.Parse(tvPrice.Text);
+            int Quantity = 0;
+            if (txtQuantity.Text != "")
             {
-                sl = int.Parse(txtSL.Text);
+                Quantity = int.Parse(txtQuantity.Text);
             }
-            float thanhtien = gia * sl;
-            tvThanhTien.Text = thanhtien.ToString();
+            float TotalPrice = gia * Quantity;
+            tvTotalPrice.Text = TotalPrice.ToString();
         }
 
         //Thanh toán
@@ -156,9 +156,9 @@ namespace QuanLyShopDienThoai
         {
             try
             {
-                int sohd = int.Parse(txtSoHD.Text);
-                string tongtien = DataProvider.Instance.ExcuteScalar("SELECT SUM(ThanhTien) FROM DonHang WHERE SoHD = " + sohd);
-                DataProvider.Instance.ExcuteNonQuery("UPDATE HoaDon SET TongTien = " + tongtien + " WHERE SoHD = " + sohd);
+                int OrderNumber = int.Parse(txtOrderNumber.Text);
+                string tongtien = DataProvider.Instance.ExcuteScalar("SELECT SUM(TotalPrice) FROM Order WHERE OrderNumber = " + OrderNumber);
+                DataProvider.Instance.ExcuteNonQuery("UPDATE Bill SET TongTien = " + tongtien + " WHERE OrderNumber = " + OrderNumber);
                 tvTongTien.Text = tongtien + " vnđ";
             }
             catch (Exception) { }
@@ -169,28 +169,28 @@ namespace QuanLyShopDienThoai
         {
             try
             {
-                int sohd = int.Parse(txtSoHD.Text);
-                string tongtien = DataProvider.Instance.ExcuteScalar("SELECT SUM(ThanhTien) FROM DonHang WHERE SoHD = " + sohd);
-                DataProvider.Instance.ExcuteNonQuery("UPDATE HoaDon SET TongTien = " + tongtien + " WHERE SoHD = " + sohd);
+                int OrderNumber = int.Parse(txtOrderNumber.Text);
+                string tongtien = DataProvider.Instance.ExcuteScalar("SELECT SUM(TotalPrice) FROM Order WHERE OrderNumber = " + OrderNumber);
+                DataProvider.Instance.ExcuteNonQuery("UPDATE Bill SET TongTien = " + tongtien + " WHERE OrderNumber = " + OrderNumber);
                 tvTongTien.Text = tongtien + " vnđ";
                 MessageBox.Show("Đã cập nhật!");
             }
             catch (Exception) 
             {
-                int sohd = int.Parse(txtSoHD.Text);
+                int OrderNumber = int.Parse(txtOrderNumber.Text);
                 tvTongTien.Text = "";
                 MessageBox.Show("Đã cập nhật!");
-                DataProvider.Instance.ExcuteNonQuery("UPDATE HoaDon SET TongTien = NULL WHERE SoHD = " + sohd);
+                DataProvider.Instance.ExcuteNonQuery("UPDATE Bill SET TongTien = NULL WHERE OrderNumber = " + OrderNumber);
             }
             this.Hide();
         }
 
-        public string MaHH = "";
-        private void dgvDonHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        public string ProductID = "";
+        private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                MaHH = dgvDonHang.Rows[e.RowIndex].Cells["clMaHH"].FormattedValue.ToString();
+                ProductID = dgvOrder.Rows[e.RowIndex].Cells["clProductID"].FormattedValue.ToString();
             }
             catch (Exception) { }
         }

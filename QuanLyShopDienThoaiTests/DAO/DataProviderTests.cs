@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using QuanLyShopDienThoai.DAO;
+using PhoneStoreSystem.DAO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyShopDienThoai.DAO.Tests
+namespace PhoneStoreSystem.DAO.Tests
 {
     [TestClass()]
     public class DataProviderTests
@@ -17,7 +17,7 @@ namespace QuanLyShopDienThoai.DAO.Tests
         {
             try
             {
-                DataTable dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM NhanVien");
+                DataTable dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM Employee");
             }
             catch (Exception ex)
             {
@@ -30,7 +30,7 @@ namespace QuanLyShopDienThoai.DAO.Tests
         {
             try
             {
-                int result = DataProvider.Instance.ExcuteNonQuery("SELECT * FROM NhanVien");
+                int result = DataProvider.Instance.ExcuteNonQuery("SELECT * FROM Employee");
             }
             catch (Exception ex)
             {

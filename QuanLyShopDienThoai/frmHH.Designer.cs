@@ -1,4 +1,4 @@
-﻿namespace QuanLyShopDienThoai
+﻿namespace PhoneStoreSystem
 {
     partial class frmHH
     {
@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.textview1 = new System.Windows.Forms.Label();
-            this.txtMaHH = new System.Windows.Forms.TextBox();
-            this.txtTenHH = new System.Windows.Forms.TextBox();
+            this.txtProductID = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtXuatxu = new System.Windows.Forms.TextBox();
+            this.txtProductOrigin = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtSLHH = new System.Windows.Forms.TextBox();
+            this.txtQuantityHH = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtGiaban = new System.Windows.Forms.TextBox();
+            this.txtProductPrice = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnUpdateHH = new System.Windows.Forms.Button();
             this.btnAddHH = new System.Windows.Forms.Button();
@@ -51,19 +51,19 @@
             this.textview1.TabIndex = 0;
             this.textview1.Text = "Mã:";
             // 
-            // txtMaHH
+            // txtProductID
             // 
-            this.txtMaHH.Location = new System.Drawing.Point(142, 43);
-            this.txtMaHH.Name = "txtMaHH";
-            this.txtMaHH.Size = new System.Drawing.Size(232, 22);
-            this.txtMaHH.TabIndex = 1;
+            this.txtProductID.Location = new System.Drawing.Point(142, 43);
+            this.txtProductID.Name = "txtProductID";
+            this.txtProductID.Size = new System.Drawing.Size(232, 22);
+            this.txtProductID.TabIndex = 1;
             // 
-            // txtTenHH
+            // txtProductName
             // 
-            this.txtTenHH.Location = new System.Drawing.Point(142, 82);
-            this.txtTenHH.Name = "txtTenHH";
-            this.txtTenHH.Size = new System.Drawing.Size(232, 22);
-            this.txtTenHH.TabIndex = 3;
+            this.txtProductName.Location = new System.Drawing.Point(142, 82);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(232, 22);
+            this.txtProductName.TabIndex = 3;
             // 
             // label1
             // 
@@ -74,12 +74,12 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tên:";
             // 
-            // txtXuatxu
+            // txtProductOrigin
             // 
-            this.txtXuatxu.Location = new System.Drawing.Point(142, 120);
-            this.txtXuatxu.Name = "txtXuatxu";
-            this.txtXuatxu.Size = new System.Drawing.Size(232, 22);
-            this.txtXuatxu.TabIndex = 5;
+            this.txtProductOrigin.Location = new System.Drawing.Point(142, 120);
+            this.txtProductOrigin.Name = "txtProductOrigin";
+            this.txtProductOrigin.Size = new System.Drawing.Size(232, 22);
+            this.txtProductOrigin.TabIndex = 5;
             // 
             // label2
             // 
@@ -90,12 +90,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Xuất xứ:";
             // 
-            // txtSLHH
+            // txtQuantityHH
             // 
-            this.txtSLHH.Location = new System.Drawing.Point(142, 198);
-            this.txtSLHH.Name = "txtSLHH";
-            this.txtSLHH.Size = new System.Drawing.Size(232, 22);
-            this.txtSLHH.TabIndex = 9;
+            this.txtQuantityHH.Location = new System.Drawing.Point(142, 198);
+            this.txtQuantityHH.Name = "txtQuantityHH";
+            this.txtQuantityHH.Size = new System.Drawing.Size(232, 22);
+            this.txtQuantityHH.TabIndex = 9;
             // 
             // label3
             // 
@@ -106,12 +106,12 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Số lượng:";
             // 
-            // txtGiaban
+            // txtProductPrice
             // 
-            this.txtGiaban.Location = new System.Drawing.Point(142, 158);
-            this.txtGiaban.Name = "txtGiaban";
-            this.txtGiaban.Size = new System.Drawing.Size(232, 22);
-            this.txtGiaban.TabIndex = 7;
+            this.txtProductPrice.Location = new System.Drawing.Point(142, 158);
+            this.txtProductPrice.Name = "txtProductPrice";
+            this.txtProductPrice.Size = new System.Drawing.Size(232, 22);
+            this.txtProductPrice.TabIndex = 7;
             // 
             // label4
             // 
@@ -153,15 +153,15 @@
             this.ClientSize = new System.Drawing.Size(442, 308);
             this.Controls.Add(this.btnAddHH);
             this.Controls.Add(this.btnUpdateHH);
-            this.Controls.Add(this.txtGiaban);
+            this.Controls.Add(this.txtProductPrice);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtSLHH);
+            this.Controls.Add(this.txtQuantityHH);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtXuatxu);
+            this.Controls.Add(this.txtProductOrigin);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtTenHH);
+            this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtMaHH);
+            this.Controls.Add(this.txtProductID);
             this.Controls.Add(this.textview1);
             this.Name = "frmHH";
             this.Text = "Hàng hóa";
@@ -174,14 +174,14 @@
         #endregion
 
         private System.Windows.Forms.Label textview1;
-        private System.Windows.Forms.TextBox txtMaHH;
-        private System.Windows.Forms.TextBox txtTenHH;
+        private System.Windows.Forms.TextBox txtProductID;
+        private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtXuatxu;
+        private System.Windows.Forms.TextBox txtProductOrigin;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSLHH;
+        private System.Windows.Forms.TextBox txtQuantityHH;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtGiaban;
+        private System.Windows.Forms.TextBox txtProductPrice;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnUpdateHH;
         private System.Windows.Forms.Button btnAddHH;

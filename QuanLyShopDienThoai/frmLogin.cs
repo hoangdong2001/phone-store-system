@@ -1,4 +1,4 @@
-﻿using QuanLyShopDienThoai.DAO;
+﻿using PhoneStoreSystem.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyShopDienThoai
+namespace PhoneStoreSystem
 {
     public partial class frmLogin : Form
     {
@@ -41,7 +41,7 @@ namespace QuanLyShopDienThoai
             return id;
 
         }
-        public string IsLogin = "";
+        public string IQuantityogin = "";
         public string permission;
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -63,18 +63,18 @@ namespace QuanLyShopDienThoai
             else
             {
                 char[] spec_ch = new char[] { '~','!','@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=', '{', '}','[', ']', ':', ';', '"', '<', '>', ',', '?', '/' };
-                IsLogin = getID(strAccount, strPassword);
+                IQuantityogin = getID(strAccount, strPassword);
                 foreach (char sc in spec_ch)
                 {
                     for (int i = 0; i<strPassword.Length; i++)
                     {
                         if (strPassword[i] == sc)
                         {
-                            IsLogin = "";
+                            IQuantityogin = "";
                         }
                     }
                 }
-                if (IsLogin == "")
+                if (IQuantityogin == "")
                 {
                     MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
                     txtAcc.Text = "";

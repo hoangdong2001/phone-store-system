@@ -1,4 +1,4 @@
-﻿namespace QuanLyShopDienThoai
+﻿namespace PhoneStoreSystem
 {
     partial class frmNH
     {
@@ -30,9 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTaoNH = new System.Windows.Forms.Button();
-            this.txtNgayNH = new System.Windows.Forms.TextBox();
+            this.txtImportDate = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtMaNH = new System.Windows.Forms.TextBox();
+            this.txtImportID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnEditNH = new System.Windows.Forms.Panel();
             this.btnXoaHH = new System.Windows.Forms.Button();
@@ -40,33 +40,33 @@
             this.btnKtraNH = new System.Windows.Forms.Button();
             this.btnUpdateNH = new System.Windows.Forms.Button();
             this.btnAddNH = new System.Windows.Forms.Button();
-            this.txtSL = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtDongia = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtXuatxu = new System.Windows.Forms.TextBox();
+            this.txtProductOrigin = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtTenHH = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMaHH = new System.Windows.Forms.TextBox();
+            this.txtProductID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvChiTietNH = new System.Windows.Forms.DataGridView();
-            this.clMaHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clTenHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clSL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvImportDetail = new System.Windows.Forms.DataGridView();
+            this.clProductID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTotalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.pnEditNH.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietNH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImportDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnTaoNH);
-            this.panel1.Controls.Add(this.txtNgayNH);
+            this.panel1.Controls.Add(this.txtImportDate);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtMaNH);
+            this.panel1.Controls.Add(this.txtImportID);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(25, 25);
@@ -85,12 +85,12 @@
             this.btnTaoNH.UseVisualStyleBackColor = true;
             this.btnTaoNH.Click += new System.EventHandler(this.btnTaoNH_Click);
             // 
-            // txtNgayNH
+            // txtImportDate
             // 
-            this.txtNgayNH.Location = new System.Drawing.Point(160, 38);
-            this.txtNgayNH.Name = "txtNgayNH";
-            this.txtNgayNH.Size = new System.Drawing.Size(138, 22);
-            this.txtNgayNH.TabIndex = 19;
+            this.txtImportDate.Location = new System.Drawing.Point(160, 38);
+            this.txtImportDate.Name = "txtImportDate";
+            this.txtImportDate.Size = new System.Drawing.Size(138, 22);
+            this.txtImportDate.TabIndex = 19;
             // 
             // label7
             // 
@@ -101,12 +101,12 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Ngày nhập:";
             // 
-            // txtMaNH
+            // txtImportID
             // 
-            this.txtMaNH.Location = new System.Drawing.Point(160, 10);
-            this.txtMaNH.Name = "txtMaNH";
-            this.txtMaNH.Size = new System.Drawing.Size(138, 22);
-            this.txtMaNH.TabIndex = 17;
+            this.txtImportID.Location = new System.Drawing.Point(160, 10);
+            this.txtImportID.Name = "txtImportID";
+            this.txtImportID.Size = new System.Drawing.Size(138, 22);
+            this.txtImportID.TabIndex = 17;
             // 
             // label1
             // 
@@ -124,15 +124,15 @@
             this.pnEditNH.Controls.Add(this.btnKtraNH);
             this.pnEditNH.Controls.Add(this.btnUpdateNH);
             this.pnEditNH.Controls.Add(this.btnAddNH);
-            this.pnEditNH.Controls.Add(this.txtSL);
+            this.pnEditNH.Controls.Add(this.txtQuantity);
             this.pnEditNH.Controls.Add(this.label6);
-            this.pnEditNH.Controls.Add(this.txtDongia);
+            this.pnEditNH.Controls.Add(this.txtPrice);
             this.pnEditNH.Controls.Add(this.label5);
-            this.pnEditNH.Controls.Add(this.txtXuatxu);
+            this.pnEditNH.Controls.Add(this.txtProductOrigin);
             this.pnEditNH.Controls.Add(this.label4);
-            this.pnEditNH.Controls.Add(this.txtTenHH);
+            this.pnEditNH.Controls.Add(this.txtProductName);
             this.pnEditNH.Controls.Add(this.label3);
-            this.pnEditNH.Controls.Add(this.txtMaHH);
+            this.pnEditNH.Controls.Add(this.txtProductID);
             this.pnEditNH.Controls.Add(this.label2);
             this.pnEditNH.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnEditNH.Location = new System.Drawing.Point(25, 100);
@@ -202,12 +202,12 @@
             this.btnAddNH.UseVisualStyleBackColor = true;
             this.btnAddNH.Click += new System.EventHandler(this.btnAddNH_Click);
             // 
-            // txtSL
+            // txtQuantity
             // 
-            this.txtSL.Location = new System.Drawing.Point(160, 127);
-            this.txtSL.Name = "txtSL";
-            this.txtSL.Size = new System.Drawing.Size(256, 22);
-            this.txtSL.TabIndex = 26;
+            this.txtQuantity.Location = new System.Drawing.Point(160, 127);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(256, 22);
+            this.txtQuantity.TabIndex = 26;
             // 
             // label6
             // 
@@ -218,12 +218,12 @@
             this.label6.TabIndex = 25;
             this.label6.Text = "Số lượng:";
             // 
-            // txtDongia
+            // txtPrice
             // 
-            this.txtDongia.Location = new System.Drawing.Point(160, 99);
-            this.txtDongia.Name = "txtDongia";
-            this.txtDongia.Size = new System.Drawing.Size(256, 22);
-            this.txtDongia.TabIndex = 24;
+            this.txtPrice.Location = new System.Drawing.Point(160, 99);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(256, 22);
+            this.txtPrice.TabIndex = 24;
             // 
             // label5
             // 
@@ -234,12 +234,12 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "Giá tiền:";
             // 
-            // txtXuatxu
+            // txtProductOrigin
             // 
-            this.txtXuatxu.Location = new System.Drawing.Point(160, 71);
-            this.txtXuatxu.Name = "txtXuatxu";
-            this.txtXuatxu.Size = new System.Drawing.Size(256, 22);
-            this.txtXuatxu.TabIndex = 22;
+            this.txtProductOrigin.Location = new System.Drawing.Point(160, 71);
+            this.txtProductOrigin.Name = "txtProductOrigin";
+            this.txtProductOrigin.Size = new System.Drawing.Size(256, 22);
+            this.txtProductOrigin.TabIndex = 22;
             // 
             // label4
             // 
@@ -250,12 +250,12 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Xuất xứ:";
             // 
-            // txtTenHH
+            // txtProductName
             // 
-            this.txtTenHH.Location = new System.Drawing.Point(160, 43);
-            this.txtTenHH.Name = "txtTenHH";
-            this.txtTenHH.Size = new System.Drawing.Size(256, 22);
-            this.txtTenHH.TabIndex = 20;
+            this.txtProductName.Location = new System.Drawing.Point(160, 43);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(256, 22);
+            this.txtProductName.TabIndex = 20;
             // 
             // label3
             // 
@@ -266,12 +266,12 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "Tên hàng hóa:";
             // 
-            // txtMaHH
+            // txtProductID
             // 
-            this.txtMaHH.Location = new System.Drawing.Point(160, 15);
-            this.txtMaHH.Name = "txtMaHH";
-            this.txtMaHH.Size = new System.Drawing.Size(180, 22);
-            this.txtMaHH.TabIndex = 18;
+            this.txtProductID.Location = new System.Drawing.Point(160, 15);
+            this.txtProductID.Name = "txtProductID";
+            this.txtProductID.Size = new System.Drawing.Size(180, 22);
+            this.txtProductID.TabIndex = 18;
             // 
             // label2
             // 
@@ -282,81 +282,81 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Mã hàng hóa:";
             // 
-            // dgvChiTietNH
+            // dgvImportDetail
             // 
-            this.dgvChiTietNH.AllowUserToAddRows = false;
-            this.dgvChiTietNH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChiTietNH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clMaHH,
-            this.clTenHH,
-            this.clDonGia,
-            this.clSL,
-            this.clThanhTien});
-            this.dgvChiTietNH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvChiTietNH.Location = new System.Drawing.Point(25, 307);
-            this.dgvChiTietNH.Name = "dgvChiTietNH";
-            this.dgvChiTietNH.ReadOnly = true;
-            this.dgvChiTietNH.RowHeadersWidth = 51;
-            this.dgvChiTietNH.RowTemplate.Height = 24;
-            this.dgvChiTietNH.Size = new System.Drawing.Size(664, 203);
-            this.dgvChiTietNH.TabIndex = 20;
-            this.dgvChiTietNH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTietNH_CellClick);
+            this.dgvImportDetail.AllowUserToAddRows = false;
+            this.dgvImportDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvImportDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clProductID,
+            this.clProductName,
+            this.clPrice,
+            this.clQuantity,
+            this.clTotalPrice});
+            this.dgvImportDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvImportDetail.Location = new System.Drawing.Point(25, 307);
+            this.dgvImportDetail.Name = "dgvImportDetail";
+            this.dgvImportDetail.ReadOnly = true;
+            this.dgvImportDetail.RowHeadersWidth = 51;
+            this.dgvImportDetail.RowTemplate.Height = 24;
+            this.dgvImportDetail.Size = new System.Drawing.Size(664, 203);
+            this.dgvImportDetail.TabIndex = 20;
+            this.dgvImportDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvImportDetail_CellClick);
             // 
-            // clMaHH
+            // clProductID
             // 
-            this.clMaHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.clMaHH.DataPropertyName = "MaHH";
-            this.clMaHH.HeaderText = "Mã";
-            this.clMaHH.MinimumWidth = 6;
-            this.clMaHH.Name = "clMaHH";
-            this.clMaHH.ReadOnly = true;
-            this.clMaHH.Width = 56;
+            this.clProductID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.clProductID.DataPropertyName = "ProductID";
+            this.clProductID.HeaderText = "Mã";
+            this.clProductID.MinimumWidth = 6;
+            this.clProductID.Name = "clProductID";
+            this.clProductID.ReadOnly = true;
+            this.clProductID.Width = 56;
             // 
-            // clTenHH
+            // clProductName
             // 
-            this.clTenHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.clTenHH.DataPropertyName = "TenHH";
-            this.clTenHH.HeaderText = "Tên hàng hóa";
-            this.clTenHH.MinimumWidth = 6;
-            this.clTenHH.Name = "clTenHH";
-            this.clTenHH.ReadOnly = true;
-            this.clTenHH.Width = 126;
+            this.clProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.clProductName.DataPropertyName = "ProductName";
+            this.clProductName.HeaderText = "Tên hàng hóa";
+            this.clProductName.MinimumWidth = 6;
+            this.clProductName.Name = "clProductName";
+            this.clProductName.ReadOnly = true;
+            this.clProductName.Width = 126;
             // 
-            // clDonGia
+            // clPrice
             // 
-            this.clDonGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.clDonGia.DataPropertyName = "DonGia";
-            this.clDonGia.HeaderText = "Đơn giá";
-            this.clDonGia.MinimumWidth = 6;
-            this.clDonGia.Name = "clDonGia";
-            this.clDonGia.ReadOnly = true;
-            this.clDonGia.Width = 86;
+            this.clPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.clPrice.DataPropertyName = "Price";
+            this.clPrice.HeaderText = "Đơn giá";
+            this.clPrice.MinimumWidth = 6;
+            this.clPrice.Name = "clPrice";
+            this.clPrice.ReadOnly = true;
+            this.clPrice.Width = 86;
             // 
-            // clSL
+            // clQuantity
             // 
-            this.clSL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.clSL.DataPropertyName = "SL";
-            this.clSL.HeaderText = "Số lượng";
-            this.clSL.MinimumWidth = 6;
-            this.clSL.Name = "clSL";
-            this.clSL.ReadOnly = true;
-            this.clSL.Width = 93;
+            this.clQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.clQuantity.DataPropertyName = "Quantity";
+            this.clQuantity.HeaderText = "Số lượng";
+            this.clQuantity.MinimumWidth = 6;
+            this.clQuantity.Name = "clQuantity";
+            this.clQuantity.ReadOnly = true;
+            this.clQuantity.Width = 93;
             // 
-            // clThanhTien
+            // clTotalPrice
             // 
-            this.clThanhTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clThanhTien.DataPropertyName = "ThanhTien";
-            this.clThanhTien.HeaderText = "Thành tièn";
-            this.clThanhTien.MinimumWidth = 6;
-            this.clThanhTien.Name = "clThanhTien";
-            this.clThanhTien.ReadOnly = true;
+            this.clTotalPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clTotalPrice.DataPropertyName = "TotalPrice";
+            this.clTotalPrice.HeaderText = "Thành tièn";
+            this.clTotalPrice.MinimumWidth = 6;
+            this.clTotalPrice.Name = "clTotalPrice";
+            this.clTotalPrice.ReadOnly = true;
             // 
             // frmNH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 535);
-            this.Controls.Add(this.dgvChiTietNH);
+            this.Controls.Add(this.dgvImportDetail);
             this.Controls.Add(this.pnEditNH);
             this.Controls.Add(this.panel1);
             this.Name = "frmNH";
@@ -367,37 +367,37 @@
             this.panel1.PerformLayout();
             this.pnEditNH.ResumeLayout(false);
             this.pnEditNH.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietNH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImportDetail)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtNgayNH;
+        private System.Windows.Forms.TextBox txtImportDate;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtMaNH;
+        private System.Windows.Forms.TextBox txtImportID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnEditNH;
         private System.Windows.Forms.Button btnKtraNH;
         private System.Windows.Forms.Button btnUpdateNH;
         private System.Windows.Forms.Button btnAddNH;
-        private System.Windows.Forms.TextBox txtSL;
+        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtDongia;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtXuatxu;
+        private System.Windows.Forms.TextBox txtProductOrigin;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTenHH;
+        private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMaHH;
+        private System.Windows.Forms.TextBox txtProductID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvChiTietNH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clMaHH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clTenHH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clDonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clSL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clThanhTien;
+        private System.Windows.Forms.DataGridView dgvImportDetail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clProductID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clTotalPrice;
         private System.Windows.Forms.Button btnXoaHH;
         private System.Windows.Forms.Button btnThemHH;
         private System.Windows.Forms.Button btnTaoNH;

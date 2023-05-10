@@ -1,4 +1,4 @@
-﻿namespace QuanLyShopDienThoai
+﻿namespace PhoneStoreSystem
 {
     partial class frmLogin
     {

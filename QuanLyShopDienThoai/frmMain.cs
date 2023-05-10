@@ -1,4 +1,4 @@
-﻿using QuanLyShopDienThoai.DAO;
+﻿using PhoneStoreSystem.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyShopDienThoai
+namespace PhoneStoreSystem
 {
     public partial class frmMain : Form
     {
@@ -27,8 +27,8 @@ namespace QuanLyShopDienThoai
         public static string permission;
         private void frmMain_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLShopDienThoaiDataSet.NhanVien' table. You can move, or remove it, as needed.
-            this.nhanVienTableAdapter.Fill(this.qLShopDienThoaiDataSet.NhanVien);
+            // TODO: This line of code loads data into the 'PhoneStoreSystemDataSet.Employee' table. You can move, or remove it, as needed.
+            this.EmployeeTableAdapter.Fill(this.PhoneStoreSystemDataSet.Employee);
             if (permission == "admin")
             {
                 LoadNV();
@@ -70,7 +70,7 @@ namespace QuanLyShopDienThoai
         //Hiển thị dữ liệu của trang "Nhân viên"
         public void LoadNV()
         {
-            string query = "SELECT MaNV, Hoten, Gioi, ChucVu FROM NhanVien";
+            string query = "SELECT EmployeeID, FullName, Gender, Position FROM Employee";
             try
             {
                 dgvNV.DataSource = DataProvider.Instance.ExcuteQuery(query);
@@ -84,7 +84,7 @@ namespace QuanLyShopDienThoai
         //Hiển thị giao diện của trang"Nhập hàng"
         public void LoadNH()
         {
-            string query = "SELECT MaNH, NgayNH, ChiPhi FROM NhapHang";
+            string query = "SELECT ImportID, ImportDate, StatisticOutcomePhi FROM Import";
             try
             {
                 dgvNH.DataSource = DataProvider.Instance.ExcuteQuery(query);
@@ -98,7 +98,7 @@ namespace QuanLyShopDienThoai
         //Hiển thị giao diện của trang"Thống kê"
         public void LoadTK()
         {
-            string query = "SELECT ID, NgayTK, DoanhThu FROM ThongKe";
+            string query = "SELECT ID, NgayTK, Revenue FROM Statistic";
             try
             {
                 dgvTK.DataSource = DataProvider.Instance.ExcuteQuery(query);
@@ -112,7 +112,7 @@ namespace QuanLyShopDienThoai
         //Hiển thị giao diện của trang"Hàng hóa"
         public void LoadHH()
         {
-            string query = "SELECT MaHH, tenHH, SL FROM HangHoa";
+            string query = "SELECT ProductID, ProductName, Quantity FROM Product";
             try
             {
                 dgvHH.DataSource = DataProvider.Instance.ExcuteQuery(query);
@@ -126,7 +126,7 @@ namespace QuanLyShopDienThoai
         //Hiển thị giao diện của trang"Hóa đơn"
         public void LoadHD()
         {
-            string query = "SELECT SoHD, NgayLap, TongTien FROM HoaDon";
+            string query = "SELECT OrderNumber, CreateDate, TongTien FROM Bill";
             try
             {
                 dgvHD.DataSource = DataProvider.Instance.ExcuteQuery(query);
@@ -194,51 +194,51 @@ namespace QuanLyShopDienThoai
         private void btnThemNV_Click(object sender, EventArgs e)
         {
             frmNV.isMainButton = "themnv";
-            frmNV frmNhanvien = new frmNV();
-            frmNhanvien.Show();
+            frmNV frmEmployee = new frmNV();
+            frmEmployee.Show();
         }
 
         private void btnSuaNV_Click(object sender, EventArgs e)
         {
-            if (MaNV == "")
+            if (EmployeeID == "")
             {
                 MessageBox.Show("Nhân viên không tồn tại!");
             }
             else
             {
                 frmNV.isMainButton = "suanv";
-                frmNV frmNhanvien = new frmNV();
-                frmNhanvien.Show();
+                frmNV frmEmployee = new frmNV();
+                frmEmployee.Show();
             }
         }
 
         private void btnXemNV_Click(object sender, EventArgs e)
         {
-            if (MaNV == "")
+            if (EmployeeID == "")
             {
                 MessageBox.Show("Nhân viên không tồn tại!");
             }
             else
             {
                 frmNV.isMainButton = "xemnv";
-                frmNV frmNhanvien = new frmNV();
-                frmNhanvien.Show();
+                frmNV frmEmployee = new frmNV();
+                frmEmployee.Show();
             }
         }
 
         private void btnXoaNV_Click(object sender, EventArgs e)
         {
-            if (MaNV == "")
+            if (EmployeeID == "")
             {
                 MessageBox.Show("Nhân viên không tồn tại");
             }
             else
             {
-                string id = MaNV;
+                string id = EmployeeID;
                 DialogResult notify = MessageBox.Show("Bạn có muốn xóa nhân viên này?", "", MessageBoxButtons.YesNo);
                 if (notify == DialogResult.Yes)
                 {
-                    NhanVienDAO.Instance.DeleteNV(id);
+                    EmployeeDAO.Instance.DeleteNV(id);
                 }
                 else
                 {
@@ -253,53 +253,53 @@ namespace QuanLyShopDienThoai
         private void btnThemNH_Click(object sender, EventArgs e)
         {
             frmNH.isMainButton = "themnh";
-            frmNH frmNhaphang = new frmNH();
-            frmNhaphang.Show();
+            frmNH frmImport = new frmNH();
+            frmImport.Show();
         }
 
         private void btnSuaNH_Click(object sender, EventArgs e)
         {
-            if (MaNH == "")
+            if (ImportID == "")
             {
                 MessageBox.Show("Đơn nhập hàng không tồn tại!");
             }
             else
             {
                 frmNH.isMainButton = "suanh";
-                frmNH frmNhaphang = new frmNH();
-                frmNhaphang.Show();
+                frmNH frmImport = new frmNH();
+                frmImport.Show();
             }
 
         }
 
         private void btnXemNH_Click(object sender, EventArgs e)
         {
-            if (MaNH == "")
+            if (ImportID == "")
             {
                 MessageBox.Show("Đơn nhập hàng không tồn tại!");
             }
             else
             {
                 frmNH.isMainButton = "xemnh";
-                frmNH frmNhaphang = new frmNH();
-                frmNhaphang.Show();
+                frmNH frmImport = new frmNH();
+                frmImport.Show();
             }
         }
 
         private void btnXoaNH_Click(object sender, EventArgs e)
         {
-            if (MaNH == "")
+            if (ImportID == "")
             {
                 MessageBox.Show("Đơn nhập hàng không tồn tại!");
             }
             else
             {
-                int id = int.Parse(MaNH);
+                int id = int.Parse(ImportID);
                 DialogResult notify = MessageBox.Show("Bạn có muốn xóa phiếu nhập hàng này?", "", MessageBoxButtons.YesNo);
                 if (notify == DialogResult.Yes)
                 {
-                    DataProvider.Instance.ExcuteNonQuery("DELETE FROM ChiTietNH WHERE MaNH = " + id);
-                    NhapHangDAO.Instance.DeleteNH(id);
+                    DataProvider.Instance.ExcuteNonQuery("DELETE FROM ImportDetail WHERE ImportID = " + id);
+                    ImportDAO.Instance.DeleteNH(id);
                 }
                 else
                 {
@@ -313,8 +313,8 @@ namespace QuanLyShopDienThoai
         private void btnThemTK_Click(object sender, EventArgs e)
         {
             frmTK.isMainButton = "themtk";
-            frmTK frmThongKe = new frmTK();
-            frmThongKe.Show();
+            frmTK frmStatistic = new frmTK();
+            frmStatistic.Show();
         }
 
         private void btnSuaTK_Click(object sender, EventArgs e)
@@ -326,8 +326,8 @@ namespace QuanLyShopDienThoai
             else
             {
                 frmTK.isMainButton = "suatk";
-                frmTK frmThongKe = new frmTK();
-                frmThongKe.Show();
+                frmTK frmStatistic = new frmTK();
+                frmStatistic.Show();
             }
 
         }
@@ -341,8 +341,8 @@ namespace QuanLyShopDienThoai
             else
             {
                 frmTK.isMainButton = "xemtk";
-                frmTK frmThongKe = new frmTK();
-                frmThongKe.Show();
+                frmTK frmStatistic = new frmTK();
+                frmStatistic.Show();
             }
         }
 
@@ -358,7 +358,7 @@ namespace QuanLyShopDienThoai
                 DialogResult notify = MessageBox.Show("Bạn có muốn xóa hàng hóa này?", "", MessageBoxButtons.YesNo);
                 if (notify == DialogResult.Yes)
                 {
-                    ThongKeDAO.Instance.DeleteTK(id);
+                    StatisticDAO.Instance.DeleteTK(id);
                 }
                 else
                 {
@@ -372,51 +372,51 @@ namespace QuanLyShopDienThoai
         private void btnThemHH_Click(object sender, EventArgs e)
         {
             frmHH.isMainButton = "themhh";
-            frmHH frmHangHoa = new frmHH();
-            frmHangHoa.Show();
+            frmHH frmProduct = new frmHH();
+            frmProduct.Show();
         }
 
         private void btnSuaHH_Click(object sender, EventArgs e)
         {
-            if (MaHH == "")
+            if (ProductID == "")
             {
                 MessageBox.Show("Hàng hóa không tồn tại!");
             }
             else
             {
                 frmHH.isMainButton = "suahh";
-                frmHH frmHangHoa = new frmHH();
-                frmHangHoa.Show();
+                frmHH frmProduct = new frmHH();
+                frmProduct.Show();
             }
         }
 
         private void btnXemHH_Click(object sender, EventArgs e)
         {
-            if (MaHH == "")
+            if (ProductID == "")
             {
                 MessageBox.Show("Hàng hóa không tồn tại!");
             }
             else
             {
                 frmHH.isMainButton = "xemhh";
-                frmHH frmHangHoa = new frmHH();
-                frmHangHoa.Show();
+                frmHH frmProduct = new frmHH();
+                frmProduct.Show();
             }
         }
 
         private void btnXoaHH_Click(object sender, EventArgs e)
         {
-            if (MaHH == "")
+            if (ProductID == "")
             {
                 MessageBox.Show("Hàng hóa không tồn tại!");
             }
             else
             {
-                string id = MaHH;
+                string id = ProductID;
                 DialogResult notify = MessageBox.Show("Bạn có muốn xóa hàng hóa này?", "", MessageBoxButtons.YesNo);
                 if (notify == DialogResult.Yes)
                 {
-                    HangHoaDAO.Instance.DeleteHH(id);
+                    ProductDAO.Instance.DeleteHH(id);
                 }
                 else
                 {
@@ -430,52 +430,52 @@ namespace QuanLyShopDienThoai
         private void btnThemHD_Click(object sender, EventArgs e)
         {
             frmHD.isMainButton = "themhd";
-            frmHD frmHoaDon = new frmHD();
-            frmHoaDon.Show();
+            frmHD frmBill = new frmHD();
+            frmBill.Show();
         }
 
         private void btnSuaHD_Click(object sender, EventArgs e)
         {
-            if (SoHD == "")
+            if (OrderNumber == "")
             {
                 MessageBox.Show("Hàng hóa không tồn tại!");
             }
             else
             {
                 frmHD.isMainButton = "suahd";
-                frmHD frmHoaDon = new frmHD();
-                frmHoaDon.Show();
+                frmHD frmBill = new frmHD();
+                frmBill.Show();
             }
         }
 
         private void btnXemHD_Click(object sender, EventArgs e)
         {
-            if (SoHD == "")
+            if (OrderNumber == "")
             {
                 MessageBox.Show("Hàng hóa không tồn tại!");
             }
             else
             {
                 frmHD.isMainButton = "xemhd";
-                frmHD frmHoaDon = new frmHD();
-                frmHoaDon.Show();
+                frmHD frmBill = new frmHD();
+                frmBill.Show();
             }
         }
 
         private void btnXoaHD_Click(object sender, EventArgs e)
         {
-            if (SoHD == "")
+            if (OrderNumber == "")
             {
                 MessageBox.Show("Hóa đơn không tồn tại!");
             }
             else
             {
-                int id = int.Parse(SoHD);
+                int id = int.Parse(OrderNumber);
                 DialogResult notify = MessageBox.Show("Bạn có muốn xóa hàng hóa này?", "", MessageBoxButtons.YesNo);
                 if (notify == DialogResult.Yes)
                 {
-                    DataProvider.Instance.ExcuteNonQuery("DELETE FROM DonHang WHERE SoHD = " + id);
-                    HoaDonDAO.Instance.DeleteHD(id);
+                    DataProvider.Instance.ExcuteNonQuery("DELETE FROM Order WHERE OrderNumber = " + id);
+                    BillDAO.Instance.DeleteHD(id);
                 }
                 else
                 {
@@ -486,16 +486,16 @@ namespace QuanLyShopDienThoai
         }
 
         //Trả về ID của dữ liệu trong DataGridView của các trang chức năng chính
-        public static string MaNV = "";
-        public static string MaNH = "";
+        public static string EmployeeID = "";
+        public static string ImportID = "";
         public static string MaTK = "";
-        public static string MaHH = "";
-        public static string SoHD = "";
+        public static string ProductID = "";
+        public static string OrderNumber = "";
         private void dgvNV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                MaNV = dgvNV.Rows[e.RowIndex].Cells["clMaNV"].FormattedValue.ToString();
+                EmployeeID = dgvNV.Rows[e.RowIndex].Cells["clEmployeeID"].FormattedValue.ToString();
             }
             catch (Exception) { }
         }
@@ -504,7 +504,7 @@ namespace QuanLyShopDienThoai
         {
             try
             {
-                MaNH = dgvNH.Rows[e.RowIndex].Cells["clMaNH"].FormattedValue.ToString();
+                ImportID = dgvNH.Rows[e.RowIndex].Cells["clImportID"].FormattedValue.ToString();
             }
             catch (Exception) { }
         }
@@ -523,7 +523,7 @@ namespace QuanLyShopDienThoai
         {
             try
             {
-                MaHH = dgvHH.Rows[e.RowIndex].Cells["clMaHH"].FormattedValue.ToString();
+                ProductID = dgvHH.Rows[e.RowIndex].Cells["clProductID"].FormattedValue.ToString();
             }
             catch (Exception) { }
         }
@@ -532,7 +532,7 @@ namespace QuanLyShopDienThoai
         {
             try
             {
-                SoHD = dgvHD.Rows[e.RowIndex].Cells["clSoHD"].FormattedValue.ToString();
+                OrderNumber = dgvHD.Rows[e.RowIndex].Cells["clOrderNumber"].FormattedValue.ToString();
             }
             catch (Exception) { }        
         }

@@ -1,4 +1,4 @@
-﻿namespace QuanLyShopDienThoai
+﻿namespace PhoneStoreSystem
 {
     partial class frmTK
     {
@@ -38,9 +38,9 @@
             this.btnAddTK = new System.Windows.Forms.Button();
             this.btnUpdateTK = new System.Windows.Forms.Button();
             this.btnKtraTK = new System.Windows.Forms.Button();
-            this.txtThu = new System.Windows.Forms.TextBox();
-            this.txtChi = new System.Windows.Forms.TextBox();
-            this.txtDoanhThu = new System.Windows.Forms.TextBox();
+            this.txtStatisticIncome = new System.Windows.Forms.TextBox();
+            this.txtStatisticOutcome = new System.Windows.Forms.TextBox();
+            this.txtRevenue = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +82,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Tổng thu:";
+            this.label3.Text = "Tổng StatisticIncome:";
             // 
             // label6
             // 
@@ -91,7 +91,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 17);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Tổng chi:";
+            this.label6.Text = "Tổng StatisticOutcome:";
             // 
             // label8
             // 
@@ -100,7 +100,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 17);
             this.label8.TabIndex = 8;
-            this.label8.Text = "Doanh thu:";
+            this.label8.Text = "Doanh StatisticIncome:";
             // 
             // btnAddTK
             // 
@@ -140,35 +140,35 @@
             this.btnKtraTK.UseVisualStyleBackColor = true;
             this.btnKtraTK.Click += new System.EventHandler(this.btnKtraTK_Click);
             // 
-            // txtThu
+            // txtStatisticIncome
             // 
-            this.txtThu.Location = new System.Drawing.Point(141, 152);
-            this.txtThu.Name = "txtThu";
-            this.txtThu.Size = new System.Drawing.Size(201, 22);
-            this.txtThu.TabIndex = 13;
+            this.txtStatisticIncome.Location = new System.Drawing.Point(141, 152);
+            this.txtStatisticIncome.Name = "txtStatisticIncome";
+            this.txtStatisticIncome.Size = new System.Drawing.Size(201, 22);
+            this.txtStatisticIncome.TabIndex = 13;
             // 
-            // txtChi
+            // txtStatisticOutcome
             // 
-            this.txtChi.Location = new System.Drawing.Point(141, 178);
-            this.txtChi.Name = "txtChi";
-            this.txtChi.Size = new System.Drawing.Size(201, 22);
-            this.txtChi.TabIndex = 14;
+            this.txtStatisticOutcome.Location = new System.Drawing.Point(141, 178);
+            this.txtStatisticOutcome.Name = "txtStatisticOutcome";
+            this.txtStatisticOutcome.Size = new System.Drawing.Size(201, 22);
+            this.txtStatisticOutcome.TabIndex = 14;
             // 
-            // txtDoanhThu
+            // txtRevenue
             // 
-            this.txtDoanhThu.Location = new System.Drawing.Point(141, 204);
-            this.txtDoanhThu.Name = "txtDoanhThu";
-            this.txtDoanhThu.Size = new System.Drawing.Size(201, 22);
-            this.txtDoanhThu.TabIndex = 15;
+            this.txtRevenue.Location = new System.Drawing.Point(141, 204);
+            this.txtRevenue.Name = "txtRevenue";
+            this.txtRevenue.Size = new System.Drawing.Size(201, 22);
+            this.txtRevenue.TabIndex = 15;
             // 
             // frmTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 326);
-            this.Controls.Add(this.txtDoanhThu);
-            this.Controls.Add(this.txtChi);
-            this.Controls.Add(this.txtThu);
+            this.Controls.Add(this.txtRevenue);
+            this.Controls.Add(this.txtStatisticOutcome);
+            this.Controls.Add(this.txtStatisticIncome);
             this.Controls.Add(this.btnKtraTK);
             this.Controls.Add(this.btnUpdateTK);
             this.Controls.Add(this.btnAddTK);
@@ -199,8 +199,8 @@
         private System.Windows.Forms.Button btnAddTK;
         private System.Windows.Forms.Button btnUpdateTK;
         private System.Windows.Forms.Button btnKtraTK;
-        private System.Windows.Forms.TextBox txtThu;
-        private System.Windows.Forms.TextBox txtChi;
-        private System.Windows.Forms.TextBox txtDoanhThu;
+        private System.Windows.Forms.TextBox txtStatisticIncome;
+        private System.Windows.Forms.TextBox txtStatisticOutcome;
+        private System.Windows.Forms.TextBox txtRevenue;
     }
 }

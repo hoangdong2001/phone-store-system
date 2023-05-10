@@ -1,4 +1,4 @@
-﻿namespace QuanLyShopDienThoai
+﻿namespace PhoneStoreSystem
 {
     partial class frmNV
     {
@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.txtEmployeeID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtHotenNV = new System.Windows.Forms.TextBox();
+            this.txtFullNameNV = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtGtNV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtChucvuNV = new System.Windows.Forms.TextBox();
+            this.txtPositionNV = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtSdtNV = new System.Windows.Forms.TextBox();
+            this.txtPhoneNumberNV = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtNamsinhNV = new System.Windows.Forms.TextBox();
+            this.txtBirthdayNV = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtDiachiNV = new System.Windows.Forms.TextBox();
+            this.txtAddressNV = new System.Windows.Forms.TextBox();
             this.btnAddNV = new System.Windows.Forms.Button();
             this.btnUpdateNV = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -55,12 +55,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã nhân viên:";
             // 
-            // txtMaNV
+            // txtEmployeeID
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(169, 44);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(326, 22);
-            this.txtMaNV.TabIndex = 1;
+            this.txtEmployeeID.Location = new System.Drawing.Point(169, 44);
+            this.txtEmployeeID.Name = "txtEmployeeID";
+            this.txtEmployeeID.Size = new System.Drawing.Size(326, 22);
+            this.txtEmployeeID.TabIndex = 1;
             // 
             // label2
             // 
@@ -71,12 +71,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Họ và tên:";
             // 
-            // txtHotenNV
+            // txtFullNameNV
             // 
-            this.txtHotenNV.Location = new System.Drawing.Point(169, 85);
-            this.txtHotenNV.Name = "txtHotenNV";
-            this.txtHotenNV.Size = new System.Drawing.Size(326, 22);
-            this.txtHotenNV.TabIndex = 3;
+            this.txtFullNameNV.Location = new System.Drawing.Point(169, 85);
+            this.txtFullNameNV.Name = "txtFullNameNV";
+            this.txtFullNameNV.Size = new System.Drawing.Size(326, 22);
+            this.txtFullNameNV.TabIndex = 3;
             // 
             // label3
             // 
@@ -103,12 +103,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Chức vụ:";
             // 
-            // txtChucvuNV
+            // txtPositionNV
             // 
-            this.txtChucvuNV.Location = new System.Drawing.Point(171, 163);
-            this.txtChucvuNV.Name = "txtChucvuNV";
-            this.txtChucvuNV.Size = new System.Drawing.Size(324, 22);
-            this.txtChucvuNV.TabIndex = 7;
+            this.txtPositionNV.Location = new System.Drawing.Point(171, 163);
+            this.txtPositionNV.Name = "txtPositionNV";
+            this.txtPositionNV.Size = new System.Drawing.Size(324, 22);
+            this.txtPositionNV.TabIndex = 7;
             // 
             // label5
             // 
@@ -119,12 +119,12 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Số điện thoại:";
             // 
-            // txtSdtNV
+            // txtPhoneNumberNV
             // 
-            this.txtSdtNV.Location = new System.Drawing.Point(171, 239);
-            this.txtSdtNV.Name = "txtSdtNV";
-            this.txtSdtNV.Size = new System.Drawing.Size(324, 22);
-            this.txtSdtNV.TabIndex = 11;
+            this.txtPhoneNumberNV.Location = new System.Drawing.Point(171, 239);
+            this.txtPhoneNumberNV.Name = "txtPhoneNumberNV";
+            this.txtPhoneNumberNV.Size = new System.Drawing.Size(324, 22);
+            this.txtPhoneNumberNV.TabIndex = 11;
             // 
             // label6
             // 
@@ -135,12 +135,12 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Năm sinh:";
             // 
-            // txtNamsinhNV
+            // txtBirthdayNV
             // 
-            this.txtNamsinhNV.Location = new System.Drawing.Point(169, 201);
-            this.txtNamsinhNV.Name = "txtNamsinhNV";
-            this.txtNamsinhNV.Size = new System.Drawing.Size(324, 22);
-            this.txtNamsinhNV.TabIndex = 9;
+            this.txtBirthdayNV.Location = new System.Drawing.Point(169, 201);
+            this.txtBirthdayNV.Name = "txtBirthdayNV";
+            this.txtBirthdayNV.Size = new System.Drawing.Size(324, 22);
+            this.txtBirthdayNV.TabIndex = 9;
             // 
             // label7
             // 
@@ -151,12 +151,12 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Địa chỉ:";
             // 
-            // txtDiachiNV
+            // txtAddressNV
             // 
-            this.txtDiachiNV.Location = new System.Drawing.Point(171, 277);
-            this.txtDiachiNV.Name = "txtDiachiNV";
-            this.txtDiachiNV.Size = new System.Drawing.Size(324, 22);
-            this.txtDiachiNV.TabIndex = 13;
+            this.txtAddressNV.Location = new System.Drawing.Point(171, 277);
+            this.txtAddressNV.Name = "txtAddressNV";
+            this.txtAddressNV.Size = new System.Drawing.Size(324, 22);
+            this.txtAddressNV.TabIndex = 13;
             // 
             // btnAddNV
             // 
@@ -189,19 +189,19 @@
             this.ClientSize = new System.Drawing.Size(561, 420);
             this.Controls.Add(this.btnUpdateNV);
             this.Controls.Add(this.btnAddNV);
-            this.Controls.Add(this.txtDiachiNV);
+            this.Controls.Add(this.txtAddressNV);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtNamsinhNV);
+            this.Controls.Add(this.txtBirthdayNV);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtSdtNV);
+            this.Controls.Add(this.txtPhoneNumberNV);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtChucvuNV);
+            this.Controls.Add(this.txtPositionNV);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtGtNV);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtHotenNV);
+            this.Controls.Add(this.txtFullNameNV);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtMaNV);
+            this.Controls.Add(this.txtEmployeeID);
             this.Controls.Add(this.label1);
             this.Name = "frmNV";
             this.Text = "Nhân viên";
@@ -214,19 +214,19 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.TextBox txtEmployeeID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtHotenNV;
+        private System.Windows.Forms.TextBox txtFullNameNV;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtGtNV;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtChucvuNV;
+        private System.Windows.Forms.TextBox txtPositionNV;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtSdtNV;
+        private System.Windows.Forms.TextBox txtPhoneNumberNV;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtNamsinhNV;
+        private System.Windows.Forms.TextBox txtBirthdayNV;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtDiachiNV;
+        private System.Windows.Forms.TextBox txtAddressNV;
         private System.Windows.Forms.Button btnAddNV;
         private System.Windows.Forms.Button btnUpdateNV;
     }

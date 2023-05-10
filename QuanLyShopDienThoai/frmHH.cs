@@ -1,4 +1,4 @@
-﻿using QuanLyShopDienThoai.DAO;
+﻿using PhoneStoreSystem.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyShopDienThoai
+namespace PhoneStoreSystem
 {
     public partial class frmHH : Form
     {
@@ -29,63 +29,63 @@ namespace QuanLyShopDienThoai
             if (isMainButton == "suahh")
             {
                 btnAddHH.Visible = false;
-                txtMaHH.Text = frmMain.MaHH;
-                txtMaHH.Enabled = false;
+                txtProductID.Text = frmMain.ProductID;
+                txtProductID.Enabled = false;
                 DataTable dt = new DataTable();
-                dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM HangHoa WHERE MaHH = '" + frmMain.MaHH + "'");
+                dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM Product WHERE ProductID = '" + frmMain.ProductID + "'");
                 foreach (DataRow dr in dt.Rows)
                 {
-                    txtTenHH.Text = dr["TenHH"].ToString();
-                    txtXuatxu.Text = dr["XuatXu"].ToString();
-                    txtGiaban.Text = dr["GiaBan"].ToString();
-                    txtSLHH.Text = dr["SL"].ToString();
+                    txtProductName.Text = dr["ProductName"].ToString();
+                    txtProductOrigin.Text = dr["ProductOrigin"].ToString();
+                    txtProductPrice.Text = dr["ProductPrice"].ToString();
+                    txtQuantityHH.Text = dr["Quantity"].ToString();
                 }
             }
             if (isMainButton == "xemhh")
             {
                 btnAddHH.Visible = false;
                 btnUpdateHH.Visible = false;
-                txtMaHH.Text = frmMain.MaHH;
+                txtProductID.Text = frmMain.ProductID;
                 DataTable dt = new DataTable();
-                dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM HangHoa WHERE MaHH = '" + frmMain.MaHH + "'");
+                dt = DataProvider.Instance.ExcuteQuery("SELECT * FROM Product WHERE ProductID = '" + frmMain.ProductID + "'");
                 foreach (DataRow dr in dt.Rows)
                 {
-                    txtTenHH.Text = dr["TenHH"].ToString();
-                    txtXuatxu.Text = dr["XuatXu"].ToString();
-                    txtGiaban.Text = dr["GiaBan"].ToString();
-                    txtSLHH.Text = dr["SL"].ToString();
+                    txtProductName.Text = dr["ProductName"].ToString();
+                    txtProductOrigin.Text = dr["ProductOrigin"].ToString();
+                    txtProductPrice.Text = dr["ProductPrice"].ToString();
+                    txtQuantityHH.Text = dr["Quantity"].ToString();
                 }
-                txtMaHH.Enabled = false;
-                txtTenHH.Enabled = false;
-                txtXuatxu.Enabled = false;
-                txtGiaban.Enabled = false;
-                txtSLHH.Enabled = false;
+                txtProductID.Enabled = false;
+                txtProductName.Enabled = false;
+                txtProductOrigin.Enabled = false;
+                txtProductPrice.Enabled = false;
+                txtQuantityHH.Enabled = false;
             }
         }
 
         //Thêm hàng hóa
         private void btnAddHH_Click(object sender, EventArgs e)
         {
-            string id = txtMaHH.Text;
-            string tenhh = txtTenHH.Text;
-            string xuatxu = txtXuatxu.Text;
+            string id = txtProductID.Text;
+            string ProductName = txtProductName.Text;
+            string ProductOrigin = txtProductOrigin.Text;
             float gb = 0;
             int s = 0;
-            if (txtGiaban.Text != "") { gb = float.Parse(txtGiaban.Text);}
-            if (txtSLHH.Text != "") { s = int.Parse(txtSLHH.Text); }
-            float giaban = gb;
-            int sl = s;
+            if (txtProductPrice.Text != "") { gb = float.Parse(txtProductPrice.Text);}
+            if (txtQuantityHH.Text != "") { s = int.Parse(txtQuantityHH.Text); }
+            float ProductPrice = gb;
+            int Quantity = s;
 
             if (id == "")
             {
                 MessageBox.Show("Vui lập nhập mã hàng hóa!");
-                txtMaHH.Focus();
+                txtProductID.Focus();
             }
             else
             {
                 try
                 {
-                    if (HangHoaDAO.Instance.InsertHH(id, tenhh, xuatxu,giaban,sl))
+                    if (ProductDAO.Instance.InsertHH(id, ProductName, ProductOrigin,ProductPrice,Quantity))
                     {
                         MessageBox.Show("Thêm hàng hóa thành công!");
                         this.Hide();
@@ -97,8 +97,8 @@ namespace QuanLyShopDienThoai
                 }
                 finally
                 {
-                    txtMaHH.Text = "";
-                    txtMaHH.Focus();
+                    txtProductID.Text = "";
+                    txtProductID.Focus();
                 }
             }
         }
@@ -106,13 +106,13 @@ namespace QuanLyShopDienThoai
         //Cập nhật thông tin hàng hóa
         private void btnUpdateHH_Click(object sender, EventArgs e)
         {
-            string id = txtMaHH.Text;
-            string tenhh = txtTenHH.Text;
-            string xuatxu = txtXuatxu.Text;
-            float giaban = float.Parse(txtGiaban.Text);
-            int sl = int.Parse(txtSLHH.Text);
+            string id = txtProductID.Text;
+            string ProductName = txtProductName.Text;
+            string ProductOrigin = txtProductOrigin.Text;
+            float ProductPrice = float.Parse(txtProductPrice.Text);
+            int Quantity = int.Parse(txtQuantityHH.Text);
 
-            if (HangHoaDAO.Instance.UpdateHH(id, tenhh, xuatxu, giaban, sl))
+            if (ProductDAO.Instance.UpdateHH(id, ProductName, ProductOrigin, ProductPrice, Quantity))
             {
                 MessageBox.Show("Hoàn tất cập nhật!");
                 this.Hide();
