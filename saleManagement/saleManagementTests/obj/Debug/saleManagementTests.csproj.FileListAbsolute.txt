@@ -1,0 +1,17 @@
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\bin\Debug\saleManagementTests.dll
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\bin\Debug\saleManagementTests.pdb
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\bin\Debug\saleManagement.exe
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\bin\Debug\saleManagement.pdb
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\bin\Debug\saleManagement.exe.config
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\obj\Debug\saleManagementTests.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\obj\Debug\saleManagementTests.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\obj\Debug\saleManagementTests.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\obj\Debug\saleManagementTests.dll
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagementTests\obj\Debug\saleManagementTests.pdb

@@ -1,0 +1,49 @@
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\bin\Debug\saleManagement.exe.config
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\bin\Debug\saleManagement.exe
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\bin\Debug\saleManagement.pdb
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\obj\Debug\saleManagement.Properties.Resources.resources
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\obj\Debug\saleManagement.exe
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\obj\Debug\saleManagement.pdb
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\obj\Debug\saleManagement.item.resources
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\obj\Debug\saleManagement.receipt.resources
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\obj\Debug\saleManagement.deliveryBill.resources
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\obj\Debug\saleManagement.statistical.resources
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\obj\Debug\saleManagement.Home.resources
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\obj\Debug\saleManagement.revenueMonthly.resources
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\bin\Debug\saleManagement.exe.config
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\bin\Debug\saleManagement.exe
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\bin\Debug\saleManagement.pdb
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.ResolveComReference.cache
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\obj\Debug\saleManagement.revenueMonthly.resources
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\obj\Debug\saleManagement.statistical.resources
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\obj\Debug\saleManagement.Home.resources
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\obj\Debug\saleManagement.deliveryBill.resources
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\obj\Debug\saleManagement.item.resources
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\obj\Debug\saleManagement.Properties.Resources.resources
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\obj\Debug\saleManagement.receipt.resources
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\obj\Debug\saleManagement.exe
+C:\Users\ASUS\Desktop\test\saleManagement\saleManagement\obj\Debug\saleManagement.pdb
+C:\Users\ASUS\Desktop\Cuối kì CNPM\source\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.ResolveComReference.cache
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\bin\Debug\saleManagement.exe.config
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\bin\Debug\saleManagement.exe
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\bin\Debug\saleManagement.pdb
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.AssemblyReference.cache
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.SuggestedBindingRedirects.cache
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.ResolveComReference.cache
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.revenueMonthly.resources
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.statistical.resources
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.Home.resources
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.deliveryBill.resources
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.item.resources
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.Properties.Resources.resources
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.receipt.resources
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.GenerateResource.cache
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.CoreCompileInputs.cache
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.exe
+C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.pdb
