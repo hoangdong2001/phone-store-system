@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d9af3afa49064897b5bce0e9407e6748" Name="Diagram1" ZoomLevel="68">
+        <EntityTypeShape EntityType="saleManagementModel.accountant" Width="1.5" PointX="5.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="saleManagementModel.customer" Width="1.5" PointX="6.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="saleManagementModel.deliveryBill" Width="1.5" PointX="9.375" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="saleManagementModel.detailOrder" Width="1.5" PointX="9.375" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="saleManagementModel.detailReceipt" Width="1.5" PointX="2.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="saleManagementModel.item" Width="1.5" PointX="5.875" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="saleManagementModel.order" Width="1.5" PointX="9.375" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="saleManagementModel.receipt" Width="1.5" PointX="2.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="saleManagementModel.sysdiagram" Width="1.5" PointX="11.125" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="saleManagementModel.FK__deliveryB__idAcc__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="saleManagementModel.FK__receipt__idAccou__49C3F6B7" ManuallyRouted="true" >
+          <ConnectorPoint PointX="5.90625" PointY="11.5" />
+          <ConnectorPoint PointX="5.90625" PointY="8.71875" />
+          <ConnectorPoint PointX="4.25" PointY="8.71875" />
+        </AssociationConnector>
+        <AssociationConnector Association="saleManagementModel.FK__orders__idCustom__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="saleManagementModel.FK__deliveryB__idOrd__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="saleManagementModel.FK__detailOrd__idIte__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="saleManagementModel.FK__detailOrd__idOrd__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="saleManagementModel.FK__detailRec__idIte__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="saleManagementModel.FK__detailRec__price__4CA06362" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

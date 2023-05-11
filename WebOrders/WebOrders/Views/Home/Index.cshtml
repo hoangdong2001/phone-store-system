@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="text-justify">
+    <h1>CREATE YOUR ORDER LIST HERE</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>A Page helps you to place an order and choose a payment method</h3>
+        <h4>Create an order first then choose the products you want to buy</h4>
+    </div>
+    <div class="col-md-4">
+        <h4>Click here</h4>
+        <h2>@Html.ActionLink("Register", "Index", "customers")</h2>
+    </div>
+    <div class="col-md-4">
+        <h4>Click here</h4>
+        <h2>@Html.ActionLink("Create your Order", "Index", "orders")</h2>
+    </div>
+    <div class="col-md-4">
+        <h4>Click here</h4>
+        <h2>@Html.ActionLink("Choose the items you want to buy", "Index", "detailOrders")</h2>
+    </div>
+</div>

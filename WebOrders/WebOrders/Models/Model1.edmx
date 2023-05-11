@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="saleManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="accountant">
+          <Key>
+            <PropertyRef Name="idAccountant" />
+          </Key>
+          <Property Name="idAccountant" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nameAccountant" Type="varchar" MaxLength="50" />
+          <Property Name="phoneAccountant" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="customer">
+          <Key>
+            <PropertyRef Name="idCustomer" />
+          </Key>
+          <Property Name="idCustomer" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nameCustomer" Type="varchar" MaxLength="50" />
+          <Property Name="phoneCustomer" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="deliveryBill">
+          <Key>
+            <PropertyRef Name="idDeliveryBill" />
+          </Key>
+          <Property Name="idDeliveryBill" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="idOrder" Type="varchar" MaxLength="50" />
+          <Property Name="idAccountant" Type="varchar" MaxLength="50" />
+          <Property Name="creationDate" Type="date" />
+          <Property Name="orderStatus" Type="varchar" MaxLength="50" />
+          <Property Name="paymentStatus" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="detailOrder">
+          <Key>
+            <PropertyRef Name="idOrder" />
+            <PropertyRef Name="idItem" />
+          </Key>
+          <Property Name="idOrder" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="idItem" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="price" Type="int" />
+        </EntityType>
+        <EntityType Name="detailReceipt">
+          <Key>
+            <PropertyRef Name="idReceipt" />
+            <PropertyRef Name="idItem" />
+          </Key>
+          <Property Name="idReceipt" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="idItem" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="price" Type="int" />
+        </EntityType>
+        <EntityType Name="item">
+          <Key>
+            <PropertyRef Name="idItem" />
+          </Key>
+          <Property Name="idItem" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nameItem" Type="nvarchar" MaxLength="50" />
+          <Property Name="inventory" Type="int" />
+        </EntityType>
+        <EntityType Name="orders">
+          <Key>
+            <PropertyRef Name="idOrder" />
+          </Key>
+          <Property Name="idOrder" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="idCustomer" Type="varchar" MaxLength="50" />
+          <Property Name="paymentMethod" Type="varchar" MaxLength="50" />
+          <Property Name="creationDate" Type="date" />
+          <Property Name="totalPrice" Type="int" />
+        </EntityType>
+        <EntityType Name="receipt">
+          <Key>
+            <PropertyRef Name="idReceipt" />
+          </Key>
+          <Property Name="idReceipt" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="idAccountant" Type="varchar" MaxLength="50" />
+          <Property Name="creationDate" Type="date" />
+          <Property Name="totalPrice" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK__deliveryB__idAcc__5812160E">
+          <End Role="accountant" Type="Self.accountant" Multiplicity="0..1" />
+          <End Role="deliveryBill" Type="Self.deliveryBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="accountant">
+              <PropertyRef Name="idAccountant" />
+            </Principal>
+            <Dependent Role="deliveryBill">
+              <PropertyRef Name="idAccountant" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__deliveryB__idOrd__571DF1D5">
+          <End Role="orders" Type="Self.orders" Multiplicity="0..1" />
+          <End Role="deliveryBill" Type="Self.deliveryBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orders">
+              <PropertyRef Name="idOrder" />
+            </Principal>
+            <Dependent Role="deliveryBill">
+              <PropertyRef Name="idOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__detailOrd__idIte__534D60F1">
+          <End Role="item" Type="Self.item" Multiplicity="1" />
+          <End Role="detailOrder" Type="Self.detailOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="item">
+              <PropertyRef Name="idItem" />
+            </Principal>
+            <Dependent Role="detailOrder">
+              <PropertyRef Name="idItem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__detailOrd__idOrd__5441852A">
+          <End Role="orders" Type="Self.orders" Multiplicity="1" />
+          <End Role="detailOrder" Type="Self.detailOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orders">
+              <PropertyRef Name="idOrder" />
+            </Principal>
+            <Dependent Role="detailOrder">
+              <PropertyRef Name="idOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__detailRec__idIte__4D94879B">
+          <End Role="item" Type="Self.item" Multiplicity="1" />
+          <End Role="detailReceipt" Type="Self.detailReceipt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="item">
+              <PropertyRef Name="idItem" />
+            </Principal>
+            <Dependent Role="detailReceipt">
+              <PropertyRef Name="idItem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__detailRec__price__4CA06362">
+          <End Role="receipt" Type="Self.receipt" Multiplicity="1" />
+          <End Role="detailReceipt" Type="Self.detailReceipt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="receipt">
+              <PropertyRef Name="idReceipt" />
+            </Principal>
+            <Dependent Role="detailReceipt">
+              <PropertyRef Name="idReceipt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__orders__idCustom__5070F446">
+          <End Role="customer" Type="Self.customer" Multiplicity="0..1" />
+          <End Role="orders" Type="Self.orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="idCustomer" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="idCustomer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__receipt__idAccou__49C3F6B7">
+          <End Role="accountant" Type="Self.accountant" Multiplicity="0..1" />
+          <End Role="receipt" Type="Self.receipt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="accountant">
+              <PropertyRef Name="idAccountant" />
+            </Principal>
+            <Dependent Role="receipt">
+              <PropertyRef Name="idAccountant" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="saleManagementModelStoreContainer">
+          <EntitySet Name="accountant" EntityType="Self.accountant" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="customer" EntityType="Self.customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="deliveryBill" EntityType="Self.deliveryBill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="detailOrder" EntityType="Self.detailOrder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="detailReceipt" EntityType="Self.detailReceipt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="item" EntityType="Self.item" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="orders" EntityType="Self.orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="receipt" EntityType="Self.receipt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__deliveryB__idAcc__5812160E" Association="Self.FK__deliveryB__idAcc__5812160E">
+            <End Role="accountant" EntitySet="accountant" />
+            <End Role="deliveryBill" EntitySet="deliveryBill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__deliveryB__idOrd__571DF1D5" Association="Self.FK__deliveryB__idOrd__571DF1D5">
+            <End Role="orders" EntitySet="orders" />
+            <End Role="deliveryBill" EntitySet="deliveryBill" />
+          </AssociationSet>
+          <AssociationSet Name="FK__detailOrd__idIte__534D60F1" Association="Self.FK__detailOrd__idIte__534D60F1">
+            <End Role="item" EntitySet="item" />
+            <End Role="detailOrder" EntitySet="detailOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK__detailOrd__idOrd__5441852A" Association="Self.FK__detailOrd__idOrd__5441852A">
+            <End Role="orders" EntitySet="orders" />
+            <End Role="detailOrder" EntitySet="detailOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK__detailRec__idIte__4D94879B" Association="Self.FK__detailRec__idIte__4D94879B">
+            <End Role="item" EntitySet="item" />
+            <End Role="detailReceipt" EntitySet="detailReceipt" />
+          </AssociationSet>
+          <AssociationSet Name="FK__detailRec__price__4CA06362" Association="Self.FK__detailRec__price__4CA06362">
+            <End Role="receipt" EntitySet="receipt" />
+            <End Role="detailReceipt" EntitySet="detailReceipt" />
+          </AssociationSet>
+          <AssociationSet Name="FK__orders__idCustom__5070F446" Association="Self.FK__orders__idCustom__5070F446">
+            <End Role="customer" EntitySet="customer" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__receipt__idAccou__49C3F6B7" Association="Self.FK__receipt__idAccou__49C3F6B7">
+            <End Role="accountant" EntitySet="accountant" />
+            <End Role="receipt" EntitySet="receipt" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="saleManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="accountant">
+          <Key>
+            <PropertyRef Name="idAccountant" />
+          </Key>
+          <Property Name="idAccountant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nameAccountant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phoneAccountant" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="deliveryBills" Relationship="Self.FK__deliveryB__idAcc__5812160E" FromRole="accountant" ToRole="deliveryBill" />
+          <NavigationProperty Name="receipts" Relationship="Self.FK__receipt__idAccou__49C3F6B7" FromRole="accountant" ToRole="receipt" />
+        </EntityType>
+        <EntityType Name="customer">
+          <Key>
+            <PropertyRef Name="idCustomer" />
+          </Key>
+          <Property Name="idCustomer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nameCustomer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phoneCustomer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="orders" Relationship="Self.FK__orders__idCustom__5070F446" FromRole="customer" ToRole="orders" />
+        </EntityType>
+        <EntityType Name="deliveryBill">
+          <Key>
+            <PropertyRef Name="idDeliveryBill" />
+          </Key>
+          <Property Name="idDeliveryBill" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idOrder" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="idAccountant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="creationDate" Type="DateTime" Precision="0" />
+          <Property Name="orderStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="paymentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="accountant" Relationship="Self.FK__deliveryB__idAcc__5812160E" FromRole="deliveryBill" ToRole="accountant" />
+          <NavigationProperty Name="order" Relationship="Self.FK__deliveryB__idOrd__571DF1D5" FromRole="deliveryBill" ToRole="orders" />
+        </EntityType>
+        <EntityType Name="detailOrder">
+          <Key>
+            <PropertyRef Name="idOrder" />
+            <PropertyRef Name="idItem" />
+          </Key>
+          <Property Name="idOrder" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idItem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="quantity" Type="Int32" />
+          <Property Name="price" Type="Int32" />
+          <NavigationProperty Name="item" Relationship="Self.FK__detailOrd__idIte__534D60F1" FromRole="detailOrder" ToRole="item" />
+          <NavigationProperty Name="order" Relationship="Self.FK__detailOrd__idOrd__5441852A" FromRole="detailOrder" ToRole="orders" />
+        </EntityType>
+        <EntityType Name="detailReceipt">
+          <Key>
+            <PropertyRef Name="idReceipt" />
+            <PropertyRef Name="idItem" />
+          </Key>
+          <Property Name="idReceipt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idItem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="quantity" Type="Int32" />
+          <Property Name="price" Type="Int32" />
+          <NavigationProperty Name="item" Relationship="Self.FK__detailRec__idIte__4D94879B" FromRole="detailReceipt" ToRole="item" />
+          <NavigationProperty Name="receipt" Relationship="Self.FK__detailRec__price__4CA06362" FromRole="detailReceipt" ToRole="receipt" />
+        </EntityType>
+        <EntityType Name="item">
+          <Key>
+            <PropertyRef Name="idItem" />
+          </Key>
+          <Property Name="idItem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nameItem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="inventory" Type="Int32" />
+          <NavigationProperty Name="detailOrders" Relationship="Self.FK__detailOrd__idIte__534D60F1" FromRole="item" ToRole="detailOrder" />
+          <NavigationProperty Name="detailReceipts" Relationship="Self.FK__detailRec__idIte__4D94879B" FromRole="item" ToRole="detailReceipt" />
+        </EntityType>
+        <EntityType Name="order">
+          <Key>
+            <PropertyRef Name="idOrder" />
+          </Key>
+          <Property Name="idOrder" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idCustomer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="paymentMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="creationDate" Type="DateTime" Precision="0" />
+          <Property Name="totalPrice" Type="Int32" />
+          <NavigationProperty Name="customer" Relationship="Self.FK__orders__idCustom__5070F446" FromRole="orders" ToRole="customer" />
+          <NavigationProperty Name="deliveryBills" Relationship="Self.FK__deliveryB__idOrd__571DF1D5" FromRole="orders" ToRole="deliveryBill" />
+          <NavigationProperty Name="detailOrders" Relationship="Self.FK__detailOrd__idOrd__5441852A" FromRole="orders" ToRole="detailOrder" />
+        </EntityType>
+        <EntityType Name="receipt">
+          <Key>
+            <PropertyRef Name="idReceipt" />
+          </Key>
+          <Property Name="idReceipt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idAccountant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="creationDate" Type="DateTime" Precision="0" />
+          <Property Name="totalPrice" Type="Int32" />
+          <NavigationProperty Name="accountant" Relationship="Self.FK__receipt__idAccou__49C3F6B7" FromRole="receipt" ToRole="accountant" />
+          <NavigationProperty Name="detailReceipts" Relationship="Self.FK__detailRec__price__4CA06362" FromRole="receipt" ToRole="detailReceipt" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK__deliveryB__idAcc__5812160E">
+          <End Role="accountant" Type="Self.accountant" Multiplicity="0..1" />
+          <End Role="deliveryBill" Type="Self.deliveryBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="accountant">
+              <PropertyRef Name="idAccountant" />
+            </Principal>
+            <Dependent Role="deliveryBill">
+              <PropertyRef Name="idAccountant" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__receipt__idAccou__49C3F6B7">
+          <End Role="accountant" Type="Self.accountant" Multiplicity="0..1" />
+          <End Role="receipt" Type="Self.receipt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="accountant">
+              <PropertyRef Name="idAccountant" />
+            </Principal>
+            <Dependent Role="receipt">
+              <PropertyRef Name="idAccountant" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__orders__idCustom__5070F446">
+          <End Role="customer" Type="Self.customer" Multiplicity="0..1" />
+          <End Role="orders" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="idCustomer" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="idCustomer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__deliveryB__idOrd__571DF1D5">
+          <End Role="orders" Type="Self.order" Multiplicity="0..1" />
+          <End Role="deliveryBill" Type="Self.deliveryBill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orders">
+              <PropertyRef Name="idOrder" />
+            </Principal>
+            <Dependent Role="deliveryBill">
+              <PropertyRef Name="idOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__detailOrd__idIte__534D60F1">
+          <End Role="item" Type="Self.item" Multiplicity="1" />
+          <End Role="detailOrder" Type="Self.detailOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="item">
+              <PropertyRef Name="idItem" />
+            </Principal>
+            <Dependent Role="detailOrder">
+              <PropertyRef Name="idItem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__detailOrd__idOrd__5441852A">
+          <End Role="orders" Type="Self.order" Multiplicity="1" />
+          <End Role="detailOrder" Type="Self.detailOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orders">
+              <PropertyRef Name="idOrder" />
+            </Principal>
+            <Dependent Role="detailOrder">
+              <PropertyRef Name="idOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__detailRec__idIte__4D94879B">
+          <End Role="item" Type="Self.item" Multiplicity="1" />
+          <End Role="detailReceipt" Type="Self.detailReceipt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="item">
+              <PropertyRef Name="idItem" />
+            </Principal>
+            <Dependent Role="detailReceipt">
+              <PropertyRef Name="idItem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__detailRec__price__4CA06362">
+          <End Role="receipt" Type="Self.receipt" Multiplicity="1" />
+          <End Role="detailReceipt" Type="Self.detailReceipt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="receipt">
+              <PropertyRef Name="idReceipt" />
+            </Principal>
+            <Dependent Role="detailReceipt">
+              <PropertyRef Name="idReceipt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="saleManagementEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="accountants" EntityType="Self.accountant" />
+          <EntitySet Name="customers" EntityType="Self.customer" />
+          <EntitySet Name="deliveryBills" EntityType="Self.deliveryBill" />
+          <EntitySet Name="detailOrders" EntityType="Self.detailOrder" />
+          <EntitySet Name="detailReceipts" EntityType="Self.detailReceipt" />
+          <EntitySet Name="items" EntityType="Self.item" />
+          <EntitySet Name="orders" EntityType="Self.order" />
+          <EntitySet Name="receipts" EntityType="Self.receipt" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="FK__deliveryB__idAcc__5812160E" Association="Self.FK__deliveryB__idAcc__5812160E">
+            <End Role="accountant" EntitySet="accountants" />
+            <End Role="deliveryBill" EntitySet="deliveryBills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__receipt__idAccou__49C3F6B7" Association="Self.FK__receipt__idAccou__49C3F6B7">
+            <End Role="accountant" EntitySet="accountants" />
+            <End Role="receipt" EntitySet="receipts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__orders__idCustom__5070F446" Association="Self.FK__orders__idCustom__5070F446">
+            <End Role="customer" EntitySet="customers" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__deliveryB__idOrd__571DF1D5" Association="Self.FK__deliveryB__idOrd__571DF1D5">
+            <End Role="orders" EntitySet="orders" />
+            <End Role="deliveryBill" EntitySet="deliveryBills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__detailOrd__idIte__534D60F1" Association="Self.FK__detailOrd__idIte__534D60F1">
+            <End Role="item" EntitySet="items" />
+            <End Role="detailOrder" EntitySet="detailOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__detailOrd__idOrd__5441852A" Association="Self.FK__detailOrd__idOrd__5441852A">
+            <End Role="orders" EntitySet="orders" />
+            <End Role="detailOrder" EntitySet="detailOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__detailRec__idIte__4D94879B" Association="Self.FK__detailRec__idIte__4D94879B">
+            <End Role="item" EntitySet="items" />
+            <End Role="detailReceipt" EntitySet="detailReceipts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__detailRec__price__4CA06362" Association="Self.FK__detailRec__price__4CA06362">
+            <End Role="receipt" EntitySet="receipts" />
+            <End Role="detailReceipt" EntitySet="detailReceipts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="saleManagementModelStoreContainer" CdmEntityContainer="saleManagementEntities">
+          <EntitySetMapping Name="accountants">
+            <EntityTypeMapping TypeName="saleManagementModel.accountant">
+              <MappingFragment StoreEntitySet="accountant">
+                <ScalarProperty Name="idAccountant" ColumnName="idAccountant" />
+                <ScalarProperty Name="nameAccountant" ColumnName="nameAccountant" />
+                <ScalarProperty Name="phoneAccountant" ColumnName="phoneAccountant" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="customers">
+            <EntityTypeMapping TypeName="saleManagementModel.customer">
+              <MappingFragment StoreEntitySet="customer">
+                <ScalarProperty Name="idCustomer" ColumnName="idCustomer" />
+                <ScalarProperty Name="nameCustomer" ColumnName="nameCustomer" />
+                <ScalarProperty Name="phoneCustomer" ColumnName="phoneCustomer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="deliveryBills">
+            <EntityTypeMapping TypeName="saleManagementModel.deliveryBill">
+              <MappingFragment StoreEntitySet="deliveryBill">
+                <ScalarProperty Name="idDeliveryBill" ColumnName="idDeliveryBill" />
+                <ScalarProperty Name="idOrder" ColumnName="idOrder" />
+                <ScalarProperty Name="idAccountant" ColumnName="idAccountant" />
+                <ScalarProperty Name="creationDate" ColumnName="creationDate" />
+                <ScalarProperty Name="orderStatus" ColumnName="orderStatus" />
+                <ScalarProperty Name="paymentStatus" ColumnName="paymentStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="detailOrders">
+            <EntityTypeMapping TypeName="saleManagementModel.detailOrder">
+              <MappingFragment StoreEntitySet="detailOrder">
+                <ScalarProperty Name="idOrder" ColumnName="idOrder" />
+                <ScalarProperty Name="idItem" ColumnName="idItem" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="detailReceipts">
+            <EntityTypeMapping TypeName="saleManagementModel.detailReceipt">
+              <MappingFragment StoreEntitySet="detailReceipt">
+                <ScalarProperty Name="idReceipt" ColumnName="idReceipt" />
+                <ScalarProperty Name="idItem" ColumnName="idItem" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="items">
+            <EntityTypeMapping TypeName="saleManagementModel.item">
+              <MappingFragment StoreEntitySet="item">
+                <ScalarProperty Name="idItem" ColumnName="idItem" />
+                <ScalarProperty Name="nameItem" ColumnName="nameItem" />
+                <ScalarProperty Name="inventory" ColumnName="inventory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orders">
+            <EntityTypeMapping TypeName="saleManagementModel.order">
+              <MappingFragment StoreEntitySet="orders">
+                <ScalarProperty Name="idOrder" ColumnName="idOrder" />
+                <ScalarProperty Name="idCustomer" ColumnName="idCustomer" />
+                <ScalarProperty Name="paymentMethod" ColumnName="paymentMethod" />
+                <ScalarProperty Name="creationDate" ColumnName="creationDate" />
+                <ScalarProperty Name="totalPrice" ColumnName="totalPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="receipts">
+            <EntityTypeMapping TypeName="saleManagementModel.receipt">
+              <MappingFragment StoreEntitySet="receipt">
+                <ScalarProperty Name="idReceipt" ColumnName="idReceipt" />
+                <ScalarProperty Name="idAccountant" ColumnName="idAccountant" />
+                <ScalarProperty Name="creationDate" ColumnName="creationDate" />
+                <ScalarProperty Name="totalPrice" ColumnName="totalPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="saleManagementModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

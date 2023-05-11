@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebOrders.Models.detailOrder>
+@using Newtonsoft.Json
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.item.nameItem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.order.idCustomer)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item.nameItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.order.idCustomer)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { idOrder = item.idOrder, idItem = item.idItem }) |
+                @Html.ActionLink("Details", "Details", new { idOrder = item.idOrder, idItem = item.idItem }) |
+                @Html.ActionLink("Delete", "Delete", new { idOrder = item.idOrder, idItem = item.idItem })
+            </td>
+        </tr>
+    }
+
+</table>

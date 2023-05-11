@@ -1,0 +1,50 @@
+﻿@model WebOrders.Models.order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.paymentMethod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.paymentMethod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.creationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.creationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.totalPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.totalPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customer.nameCustomer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer.nameCustomer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idOrder }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
