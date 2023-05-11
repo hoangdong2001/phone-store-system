@@ -44,5 +44,15 @@ namespace saleManagement.Properties {
                 return ((string)(this["saleManagementConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=saleManagement;Integrated Security=True")]
+        public string saleManagementConnectionString2 {
+            get {
+                return ((string)(this["saleManagementConnectionString2"]));
+            }
+        }
     }
 }

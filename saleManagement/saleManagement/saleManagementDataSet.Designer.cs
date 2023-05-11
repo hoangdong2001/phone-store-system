@@ -4484,7 +4484,7 @@ SELECT idAccountant, nameAccountant, phoneAccountant FROM accountant WHERE (idAc
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString1;
+            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4864,7 +4864,7 @@ SELECT idCustomer, nameCustomer, phoneCustomer FROM customer WHERE (idCustomer =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString1;
+            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5264,7 +5264,7 @@ SELECT idDeliveryBill, idOrder, idAccountant, creationDate, orderStatus, payment
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString1;
+            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5734,7 +5734,7 @@ SELECT idOrder, idItem, quantity, price FROM detailOrder WHERE (idItem = @idItem
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString1;
+            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6144,7 +6144,7 @@ SELECT idReceipt, idItem, quantity, price FROM detailReceipt WHERE (idItem = @id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString1;
+            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6551,7 +6551,7 @@ SELECT idItem, nameItem, inventory FROM item WHERE (idItem = @idItem)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString1;
+            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6944,7 +6944,7 @@ SELECT idOrder, idCustomer, paymentMethod, creationDate, totalPrice FROM orders 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString1;
+            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7389,7 +7389,7 @@ SELECT idReceipt, idAccountant, creationDate, totalPrice FROM receipt WHERE (idR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString1;
+            this._connection.ConnectionString = global::saleManagement.Properties.Settings.Default.saleManagementConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

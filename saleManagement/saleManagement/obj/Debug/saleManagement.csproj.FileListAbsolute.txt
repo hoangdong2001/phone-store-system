@@ -47,3 +47,37 @@ C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleMana
 C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.CoreCompileInputs.cache
 C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.exe
 C:\Users\meows\OneDrive\Máy tính\Group24_source\source\saleManagement\saleManagement\obj\Debug\saleManagement.pdb
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\bin\Debug\saleManagement.exe.config
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\bin\Debug\saleManagement.exe
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\bin\Debug\saleManagement.pdb
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.ResolveComReference.cache
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.revenueMonthly.resources
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.statistical.resources
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.Home.resources
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.deliveryBill.resources
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.item.resources
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.Properties.Resources.resources
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.receipt.resources
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.exe
+C:\Users\PC\Desktop\phone-store-system-main\phone-store-system-main\saleManagement\saleManagement\obj\Debug\saleManagement.pdb
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\bin\Debug\saleManagement.exe.config
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\bin\Debug\saleManagement.exe
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\bin\Debug\saleManagement.pdb
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.ResolveComReference.cache
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.revenueMonthly.resources
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.statistical.resources
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.Home.resources
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.deliveryBill.resources
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.item.resources
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.Properties.Resources.resources
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.receipt.resources
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.exe
+C:\Users\PC\Desktop\Demo\phone-store-system\saleManagement\saleManagement\obj\Debug\saleManagement.pdb

@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -235,8 +236,9 @@ namespace saleManagement
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-
-            export2Excel(dataGridView1, @"C:\", "receipt");
+            string currentDirectory = Environment.CurrentDirectory;
+            string exportPath = Path.Combine(currentDirectory);
+            export2Excel(dataGridView1, exportPath, "receipt.xlsx");
         }
     }
 }
