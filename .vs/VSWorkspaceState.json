@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\WebOrders",
-    "\\WebOrders\\WebOrders",
-    "\\WebOrders\\WebOrders\\Views",
-    "\\WebOrders\\WebOrders\\Views\\Home"
+    ""
   ],
-  "SelectedNode": "\\WebOrders\\WebOrders\\Views\\Home\\Contact.cshtml",
+  "SelectedNode": "\\WebOrders.sln",
   "PreviewInSolutionExplorer": false
 }
